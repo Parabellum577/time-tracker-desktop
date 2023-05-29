@@ -1,0 +1,123 @@
+.integratedStore {
+  background-color: #fff;
+  border-radius: 4px;
+  color: #48555e;
+  font-size: 12px;
+  margin: 6px 0;
+  width: 100%;
+
+  .storeHead {
+    align-items: center;
+    border-bottom: 1px solid #d6d6d6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 16px;
+    position: relative;
+
+    .labelImage {
+      background: #e9f4ff;
+      border-radius: 50%;
+      border: 1px solid #1991eb;
+      height: 16px;
+      left: 40px;
+      padding: 2px;
+      position: absolute;
+      top: 38px;
+      width: 16px;
+      z-index: 1;
+    }
+
+    .avatarWrapper {
+      background-color: #e7f4ff;
+      border-radius: 50%;
+      border: 2px solid #1991eb;
+      height: 44px;
+      width: 44px;
+
+      .userImage {
+        height: 44px;
+        width: 44px;
+      }
+    }
+
+    .userInfo {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      width: 63%;
+
+      .userName {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+
+      .userEmail {
+        color: $additional-color;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    .disconnectMenu {
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    .userBlock {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      width: 68%;
+    }
+  }
+
+  .folderBlock {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 43px 10px 32px;
+
+    .folderName {
+      align-items: center;
+      display: flex;
+      font-size: 18px;
+      font-weight: 600;
+      justify-content: center;
+      margin-bottom: 43px;
+      width: 100%;
+
+      .folderIcon {
+        color: #1991eb;
+        font-size: 28px;
+        margin: 0 12px;
+      }
+    }
+
+    .folderBtn {
+      background-color: #fff;
+      border-radius: 4px;
+      border: 2px solid #1991eb;
+      color: #1991eb;
+      cursor: pointer;
+      font-weight: 700;
+      height: 36px;
+      text-decoration: none;
+      width: 125px;
+
+      &:hover {
+        background-color: #eaf3fb;
+        border-width: 3px;
+      }
+    }
+  }
+}
+
+.menuItem {
+  background: #f2f4f7;
+  height: 36px;
+  padding: 0;
+}

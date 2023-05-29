@@ -1,0 +1,82 @@
+.rolePickerBlock {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: #2e2f2f;
+  font-size: 14px;
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0 3px 0 9px;
+  width: 100%;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.3s box-shadow linear;
+
+  * {
+    cursor: pointer;
+  }
+
+  &Disable {
+    pointer-events: none;
+    background: #70767d;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 0px 2px #1991eb;
+  }
+
+  &Focus {
+    box-shadow: 0px 0px 0px 2px #1991eb;
+  }
+}
+
+.roleMenu {
+  background: #fff;
+  position: absolute;
+  top: 8%;
+  height: 600px;
+  overflow-y: auto;
+  border-radius: 4px;
+  z-index: 3;
+  width: 240px;
+  right: 15%;
+  font-size: 15px;
+  li {
+    padding: 10px 15px 10px 10px;
+    cursor: pointer;
+    position: relative;
+    line-height: 1.2;
+
+    &.chosenRoleItem::after {
+      content: '✔';
+      position: absolute;
+      right: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #1991eb;
+    }
+
+    &.chosenRoleItem::before {
+      content: '';
+      width: 5px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background: #1991eb;
+    }
+
+    &:hover {
+      background: #1991eb;
+      color: #fff;
+    }
+
+    &:hover::after {
+      color: #fff;
+    }
+  }
+}

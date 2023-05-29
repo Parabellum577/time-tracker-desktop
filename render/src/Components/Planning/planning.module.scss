@@ -1,0 +1,473 @@
+.container {
+  align-items: center;
+  border-bottom: 1px solid #262f37;
+  color: $additional-color;
+  display: flex;
+  flex-direction: column;
+  height: 68px;
+  min-height: 68px;
+  justify-content: space-between;
+  transition: background-color 0.6s;
+  width: -webkit-fill-available;
+
+  &:hover {
+    background: #404955;
+
+    .block {
+      .activateButton {
+        display: flex;
+
+        // .playPauseIcon path {
+        //   fill: #858c9a;
+        // }
+      }
+
+      .reportBlock {
+        position: relative;
+        .reportIcon {
+          background: #fff;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .block {
+    align-items: center;
+    color: $additional-color;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 18px;
+    width: -webkit-fill-available;
+
+    &.unreportedWrap {
+      * {
+        cursor: pointer;
+      }
+    }
+
+    &.hover {
+      background: #3c4854;
+    }
+
+    .reportBlock {
+      align-items: center;
+      display: flex;
+      height: 24px;
+      justify-content: center;
+      position: relative;
+      width: 24px;
+      margin-left: 16px;
+      margin-right: -7px;
+
+      .reportIcon {
+        background: $divider-color;
+        border-radius: 50%;
+        color: #353d46;
+        cursor: pointer;
+        font-size: 18px;
+
+        &:hover {
+          background: #76c545;
+          color: #fff;
+          opacity: 1;
+        }
+      }
+
+      .warningDot {
+        color: #d82e37;
+        cursor: pointer;
+        font-size: 10px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+      }
+    }
+  }
+
+  .activateButton {
+    align-items: center;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    margin-right: 18px;
+    min-width: 20px;
+    width: 20px;
+
+    .playPauseIcon {
+      color: $additional-color;
+      cursor: pointer;
+      height: 24px;
+      width: 24px;
+      cursor: pointer;
+
+      &:hover {
+        path {
+          fill: #fff;
+          opacity: 1;
+        }
+      }
+    }
+
+    * {
+      cursor: pointer;
+    }
+  }
+
+  .expiredButton {
+    background-color: $red;
+  }
+
+  .content {
+    align-items: center;
+    border-radius: 4px;
+    color: #47525e;
+    font-size: 12px;
+    height: 66px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    margin-bottom: -2px;
+    text-overflow: ellipsis;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .title {
+      align-items: center;
+      display: flex;
+      width: -webkit-fill-available;
+      /* padding-bottom: 4px; */
+
+      .integrationIcon {
+        font-size: 16px;
+        height: 16px;
+      }
+
+      > div {
+        min-width: 20px;
+      }
+
+      > span {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 15px;
+        margin-left: 6px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 310px;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .subtitle {
+      align-items: center;
+      color: #858e9b;
+      display: flex;
+      font-size: 10px;
+      height: 14px;
+      justify-content: space-between;
+      display: flex;
+      width: -webkit-fill-available;
+
+      > :first-child {
+        display: flex;
+
+        p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-weight: 400;
+          margin: 0;
+          max-width: 85px;
+          white-space: nowrap;
+          max-height: -webkit-fill-available;
+        }
+      }
+
+      .star {
+        cursor: pointer;
+        font-size: 12px;
+        margin-right: 3px;
+
+        &:hover {
+          color: #f79e35;
+        }
+      }
+
+      .bookmark {
+        color: #f79e35;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .dot {
+        font-size: 7px;
+        margin: 0 3px;
+      }
+    }
+
+    .estimBlock {
+      color: #858e9b;
+      display: flex;
+      /* flex-direction: column; */
+      font-size: 12px;
+      font-weight: 400;
+      height: -webkit-fill-available;
+      justify-content: center;
+      text-align: right;
+
+      > :first-child {
+        margin-right: 15px;
+      }
+
+      p {
+        margin: 2px 0;
+      }
+
+      .overSpendTime {
+        color: #ed1d41;
+      }
+    }
+  }
+
+  .fullWidth {
+    padding: 15px;
+    width: 100%;
+  }
+
+  &.active {
+    background: #5a944a;
+    height: 98px;
+
+    .content {
+      .estimBlock {
+        color: #bbb;
+        > p {
+          font-size: 11px;
+        }
+
+        p.spentTime {
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: 600;
+          height: 14px;
+          line-height: 20px;
+          margin-top: -1px;
+        }
+
+        p.overSpendTime {
+          color: #ab001e;
+        }
+      }
+    }
+
+    &:hover {
+      background: #59a743;
+    }
+
+    .activateButton {
+      display: flex;
+      .playPauseIcon {
+        path {
+          fill: #fff;
+          opacity: 0.5;
+        }
+      }
+
+      &:hover {
+        .playPauseIcon path {
+          fill: #fff;
+          opacity: 1;
+        }
+      }
+    }
+
+    .reportBlock {
+      .reportIcon {
+        background: #fff;
+        color: #353d46;
+        opacity: 0.5;
+      }
+    }
+
+    .block {
+      .content {
+        .subtitle {
+          color: #fff;
+        }
+      }
+    }
+
+    .progressBar {
+      margin: 0;
+    }
+
+    .quickEditContainer {
+      display: flex;
+      min-height: 30px;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 11px;
+      justify-content: space-between;
+      width: -webkit-fill-available;
+
+      .buttonContainer {
+        display: flex;
+        justify-content: space-between;
+        height: 19px;
+        align-items: center;
+
+        button {
+          background: #ffffff7d;
+          color: #353d46;
+          cursor: pointer;
+          height: 18px;
+          width: 18px;
+          text-align: center;
+          border: none;
+          margin-right: 6px;
+          font-size: 10px;
+          border-radius: 3px;
+          padding: 0;
+
+          &.active {
+            background: #1991ebbf;
+          }
+        }
+
+        .editIcon {
+          cursor: pointer;
+          font-size: 16px;
+          color: #777e88;
+        }
+      }
+
+      input {
+        width: 230px;
+        background: #ffffff7d;
+        border-radius: 5px;
+        border: none;
+        color: #777e88;
+        cursor: text;
+        height: 17px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        font-size: 10px;
+
+        &::placeholder {
+          color: #777e88;
+        }
+      }
+    }
+  }
+}
+
+.highlighted {
+  background: #3c536a;
+}
+
+.menuDropdown {
+  align-items: stretch;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid $border-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -60px;
+  margin-top: -30px;
+  min-height: 90px;
+  position: absolute;
+  width: 100px;
+}
+
+.menuIcon {
+  cursor: inherit;
+  font-size: 14px;
+  margin: 0 4px;
+}
+
+ul[role='menu'] {
+  padding: 0;
+
+  & > .menuItem {
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    outline: none;
+    padding: 0;
+    text-align: left;
+
+    &:hover {
+      background-color: #f2f4f7;
+    }
+
+    .planningIcon {
+      cursor: inherit;
+      font-size: 14px;
+      margin: 0 4px;
+    }
+
+    .deleteIcon {
+      color: #dd5364;
+      cursor: inherit;
+      font-size: 14px;
+      margin: 0 4px;
+    }
+
+    span {
+      color: #48555e;
+      cursor: inherit;
+      font-size: 14px;
+      font-weight: 500;
+      margin-left: 16px;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .disabled {
+      color: #bbc5d5;
+      cursor: default;
+    }
+  }
+}
+
+.expiredBlock {
+  background-color: $planning-expired;
+}
+
+.progressBar {
+  background-color: #22282e;
+  border-radius: 100px;
+  height: 2px;
+  margin: 0 56px;
+  transition: margin 0.6s;
+  width: -webkit-fill-available;
+
+  .value {
+    background-color: #1bb934;
+    border-radius: 100px;
+    height: 2px;
+    width: 0%;
+  }
+}
+
+.expiredProgressBar {
+  background-color: $red;
+}

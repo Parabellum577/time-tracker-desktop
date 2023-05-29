@@ -1,0 +1,52 @@
+{
+    "name": "Time Tracking and Self Management",
+    "version": "0.0.49",
+    "description": "Track is a feature-packed time-tracker for IT professionals that is proven to increase engineers' performance.",
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "declarativeContent",
+      "storage",
+      "notifications" ,
+      "idle",
+      "identity",
+      "cookies",
+      "https://tgmsdev.qarea.org",
+      "contextMenus",
+      "http://www.google.com/*",
+      "https://www.dropbox.com/*",
+      "<all_urls>"
+    ],
+    "background": {
+      "page": "./background.html",
+      "persistent": true
+    },
+    "browser_action": {
+      "default_popup": "./popup.html",
+      "default_title": "Open the popup"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*/*", "http://*/*"],
+        "all_frames": true,
+        "js": ["./trackers.bundle.js"]
+      }
+    ],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "web_accessible_resources":["images/check.svg", "images/pause.svg", "images/*.png"],
+    "icons": {
+        "16": "images/icon-16.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+      },
+    "manifest_version": 2,
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwbEyrc70l27005h4DYZPzlAtOPis5OFuVHWREw7QLsA8cE2JX1ow1quhl062k20A5sws6EhpsVyj5mJsz5oBUVLyRBq/+4v+gS3q/MhSjvGWZ+o9n/UvLOH9hH3Z4qGADfC1H3OsItnYpFMiCtWxko5pMuNfNy6aG/0wwWzdYoKsK8jDiURpnbgkoAEurebnpmpKJ9iBD8PBOh2MueLgKBXpBwjnq1z0L1iK79oYJNFFKI4vZP8c/BwI3hxpVYqsqnh5PQOnLtuHEpUCFHRBAeqBCa9/lKM8LWuekEHEberEzOU5gJMCRK3MNq/lMrEqcAFGWlvhNzW/3ZY5zqV4cQIDAQAB",
+    "oauth2":{
+      "client_id": "276913848867-n5nli7oa5rcjmag2v7a1tmllqm8q9mhv.apps.googleusercontent.com",
+      "scopes":[
+        "https://www.googleapis.com/auth/userinfo.email",
+        "https://www.googleapis.com/auth/userinfo.profile",
+        "https://www.googleapis.com/auth/plus.me"
+      ]
+    }
+  }

@@ -1,0 +1,47 @@
+.trackerSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  .addTracker {
+    background: #1991eb;
+    border-radius: 4px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    height: 36px;
+    margin: 14px 4px 14px 0;
+    width: 160px;
+
+    &:hover {
+      background: #68b8f5;
+    }
+  }
+
+  .trackersWrapper {
+    overflow-y: auto;
+
+    .trackersContainer {
+      border-top: 1px solid $divider-color;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .addTrackerBlock {
+      padding: 15px;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      border-bottom: 1px solid $divider-color;
+      border-right: 1px solid $divider-color;
+
+      &:nth-child(even):before {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}

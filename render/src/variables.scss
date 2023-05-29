@@ -1,0 +1,45 @@
+$app-width: 445px;
+$title-bar-height: 22px;
+$app-height: calc(var(--current-app-height) - #{$title-bar-height});
+$app-main-background: #282f36;
+$app-body-background: #353d46;
+$background: #282f36;
+$mainTextLight: #bbc5d5;
+$mainText: #4a4a4a;
+$red: #dd5364;
+$border-color: #dee3ec;
+$divider-color: #2b323a;
+$additional-color: #858e9b;
+
+$planning-height: 46px;
+$sidebar-width: 60px;
+$planning-active: #bbe5c2;
+$planning-expired: #ffd3d8;
+
+@mixin activeTrackingKeyframes {
+  @keyframes progressBarStripes {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: 1rem 0;
+    }
+  }
+}
+
+@mixin activeTrackingAnimation {
+  animation: progressBarStripes 1.6s linear infinite;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 16px 16px;
+  backface-visibility: hidden;
+}

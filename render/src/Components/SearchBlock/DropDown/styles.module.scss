@@ -1,0 +1,110 @@
+.searchHead {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+
+  > span {
+    color: #7f8fa4;
+    font-size: 12px;
+    font-weight: 450;
+  }
+
+  .headIcons {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    .avatarBlock {
+      position: relative;
+    }
+
+    .actionsBarAvatar {
+      border-radius: 28px;
+      height: 28px;
+      margin-right: 8px;
+      width: 28px;
+    }
+
+    .checkIcon {
+      background: #29dd29;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      color: #fff;
+      font-size: 12px;
+      left: 16px;
+      position: absolute;
+      top: 16px;
+      z-index: 1;
+    }
+
+    .emptyIcon {
+      background: #fff;
+      border-radius: 50%;
+      border: 2px solid #dde1e7;
+      color: #fff;
+      font-size: 10px;
+      left: 16px;
+      position: absolute;
+      top: 16px;
+      z-index: 1;
+    }
+
+    > div * {
+      cursor: pointer;
+    }
+
+    .sortItem {
+      fill: $additional-color;
+      margin-left: 5px;
+      width: 26px;
+
+      &:hover {
+        path {
+          fill: #3c8deb;
+        }
+      }
+    }
+
+    .choosenItem {
+      fill: #3c8deb;
+    }
+
+    .underline {
+      background: #3c8deb;
+      height: 2px;
+      position: absolute;
+      top: 34px;
+      width: 28px;
+    }
+
+    .underlineTracker {
+      right: 30px;
+    }
+  }
+}
+
+.divider {
+  background: #d2d9e0;
+  height: 1px;
+}
+
+.projectsListDropdown {
+  background-color: #fff;
+  height: -webkit-fill-available;
+  left: 0;
+  margin-top: 100px;
+  max-height: 77%;
+  overflow: hidden auto;
+  position: absolute;
+  width: -webkit-fill-available;
+  z-index: 1;
+
+  & :last-child {
+    border-bottom: 0;
+  }
+}
+
+.manualModal {
+  top: 24%;
+}

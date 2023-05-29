@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "jsx": "react",
+    "target": "es2018",
+    "paths": {
+      "*": ["node_modules/*"],
+      "@services/*": ["./services/*"],
+      "@store/*": ["./store/*"],
+      "@store": ["./store/index"],
+      "@api": ["./services/api.ts"],
+      "@api-types": ["./services/api-types.ts"],
+      "@types": ["./services/types.ts"],
+      "@components/*": ["./render/src/Components/*"],
+      "@images/*": ["./images/*"],
+      "@test-helpers/*": ["./test-helpers/*"],
+      "@electronMain/*": ["./electron-main/*"],
+      "@utils": ["./utils/index.ts"],
+      "@Routers": ["./render/src/Routers/index.tsx"],
+      "@openWindow": ["./services/openWindow.ts"]
+    }
+  },
+  "files": ["./globals.d.ts"],
+  "include": ["electron-main/**/*", "store/**/*", "render/**/*", "services/**/*", "images/*"]
+}

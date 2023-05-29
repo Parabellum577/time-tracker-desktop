@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'sf_ui_display';
+  src: url('./SFUIDisplay-Light.woff2') format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+}
+
+body {
+  background: #f2f4f7;
+  color: #282f36;
+  font: 12px/1.25 'sf_ui_display', Arial, sans-serif;
+  margin: 0;
+}
+
+.help-component-container {
+  align-self: normal;
+  padding: 40px 30px 0;
+  width: 100%;
+}
+
+.help-component-title {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 36px;
+  margin-bottom: 16px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.help-component-code-key {
+  background-color: #e9f5ff;
+  border-radius: 8px;
+  border: 1px solid #d1ebff;
+  margin: 16px 0;
+  padding: 24px;
+  position: relative;
+}
+
+.help-component-list {
+  color: #48555e;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 20px;
+  text-align: left;
+  word-break: break-word;
+}
+
+.help-component-list > strong {
+  color: #000000;
+  font-weight: 700;
+}
+
+.help-component-img {
+  height: auto;
+  max-width: 490px;
+}
+
+img {
+  border: 0;
+}
+
+ol {
+  display: block;
+  list-style-type: decimal;
+  margin-block-end: 1em;
+  margin-block-start: 1em;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin-left: 14px;
+  padding-inline-start: 40px;
+  padding: 0;
+}
+
+p {
+  display: block;
+  margin-block-end: 1em;
+  margin-block-start: 1em;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+}
+
+li {
+  display: list-item;
+}
+
+code:hover {
+  background-color: #95a0ad;
+}
+.hint-copy {
+  margin-left: 4px;
+  color: green;
+}
+
+.help-instruction-block {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  font-family: 'sf_ui_display';
+  height: 100vh;
+}
+
+.gif {
+  width: 100%;
+  height: 80vh;
+}
+
+.text-instruction {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  color: #282f36;
+  height: 20vh;
+}
+.instruction-title {
+  color: #fff;
+  width: 100%;
+  height: 6vh;
+  background-color: #353d46;
+  border-bottom: solid 0.5px #000000;
+  text-align: center;
+  align-self: center;
+}
+
+.instruction-list {
+  width: 95%;
+  height: 14vh;
+  align-self: center;
+  padding-top: 10px;
+  line-height: 1.6;
+  text-align: left;
+  margin-top: 0px;
+  padding-left: 4px;
+  font-size: 14px;
+  list-style: none;
+}
+
+#zohoToken {
+  cursor: pointer;
+  text-decoration: underline;
+}

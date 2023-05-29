@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+    <title>YOUTRACK</title>
+  </head>
+  <body>
+    <div class="help-component-container youtrack">
+      <p class="help-component-title youtrack">
+        To enable time tracking in your project on YouTrack:
+      </p>
+      <ol>
+        <li class="help-component-list">
+          Click the
+          <strong>`Projects link`</strong>
+          in the main navigation.
+        </li>
+        <li class="help-component-list">
+          Select the project where you want to enable time tracking.
+        </li>
+        <li class="help-component-list">Click the <strong>`Edit project`</strong> link.</li>
+        <li class="help-component-list">Select the <strong>`Time Tracking`</strong> tab.</li>
+        <li class="help-component-list">
+          Select the <strong>`Enable time tracking`</strong> checkbox.
+          <div>
+            <p>Additional settings for time tracking configuration are shown.</p>
+            <img
+              src="./images/iVBORw0KGgoAAAANSUhEUgAAAuUAAAFqCAMAAACK6tRcAAADAF.png"
+              alt="You track support image"
+              class="help-component-img"
+            />
+            <p>YouTrack checks for period-type fields with the names Estimation and Spent Time.</p>
+            <ul style="list-style-type: circle; padding-left: 17px;">
+              <li class="help-component-list">
+                If these fields exist, you can select which field to use for estimations and time spent. If these field
+                are not currently attached to the project, they are added automatically.
+              </li>
+              <li class="help-component-list">
+                If these fields do not exist, YouTrack asks you to create them.
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="help-component-list">
+          For the Estimate field setting, select an existing field from the drop-down list or click the Create and
+          attach "Estimation" field link.
+        </li>
+        <li class="help-component-list">
+          For the Time spent field setting, select an existing field from the drop-down list or click the Create and
+          attach "Spent time" field link. This field is converted to store a calculated value and can no longer be
+          updated manually. Values that are stored in this field are discarded.
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

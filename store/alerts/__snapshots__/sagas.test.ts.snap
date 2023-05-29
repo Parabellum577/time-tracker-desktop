@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Store] Alert Sagas [Failed] Should emit handleClearAlert 1`] = `
+Object {
+  "done": false,
+  "value": undefined,
+}
+`;
+
+exports[`[Store] Alert Sagas [Failed] Should emit handleShowAlerts 1`] = `
+Object {
+  "done": false,
+  "value": Object {
+    "payload": Object {
+      "alertMessage": "INVALID_LOGIN",
+      "alertType": "error",
+    },
+    "type": "notifications/SHOW_ALERT_MESSAGE_SUCCESS",
+  },
+}
+`;
+
+exports[`[Store] Alert Sagas [Success] Should emit handleClearAlert 1`] = `
+Object {
+  "done": false,
+  "value": undefined,
+}
+`;

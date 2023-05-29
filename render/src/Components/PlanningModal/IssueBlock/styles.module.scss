@@ -1,0 +1,53 @@
+.issueBlock {
+  position: relative;
+  margin: 16px;
+
+  .projectInfo {
+    position: absolute;
+    height: 20px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    bottom: 42px;
+    border: 1px solid #fff;
+    left: 12px;
+    border-radius: 4px;
+
+    > span {
+      font-size: 10px;
+      color: #7f8fa4;
+      letter-spacing: 0.01em;
+      margin-left: 2px;
+      font-weight: 600;
+      max-width: 335px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .issueInfo {
+    height: 48px;
+    background: #f2f4f7;
+    width: -webkit-fill-available;
+    border: solid 1px #c3c9d4;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 600;
+
+    .issueTitle {
+      color: #000;
+      letter-spacing: 0.01em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .time {
+      color: #1991eb;
+    }
+  }
+}

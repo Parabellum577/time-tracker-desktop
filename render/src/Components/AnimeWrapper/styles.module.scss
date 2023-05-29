@@ -1,0 +1,17 @@
+.wrapper {
+  background-color: $app-body-background;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - #{$title-bar-height});
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+.modalWindow {
+  height: calc(100vh - 42px);
+  margin: 0 10px;
+  width: calc(100vw - 20px);
+}

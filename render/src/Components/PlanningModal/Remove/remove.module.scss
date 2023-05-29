@@ -1,0 +1,49 @@
+.mainBody {
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  letter-spacing: normal;
+  text-align: center;
+  color: #616e7b;
+  padding: 24px;
+
+  .contentBlock {
+    margin: 0 0 24px;
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 13px;
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .buttonsBlock {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    button {
+      border-radius: 4px;
+      background-color: #1991eb;
+      color: #fff;
+      height: 36px;
+      width: 40%;
+      cursor: pointer;
+      border: 0;
+      font-weight: 500;
+      font-size: 14px;
+
+      &:hover {
+        background-color: #ececec;
+        color: #63707f;
+      }
+
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+  }
+}

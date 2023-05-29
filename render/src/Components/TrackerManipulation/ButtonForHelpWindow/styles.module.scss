@@ -1,0 +1,32 @@
+.hintBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.helpBtn {
+  align-items: center;
+  color: #1991eb;
+  cursor: pointer;
+  display: flex;
+  font-weight: 600;
+  font-size: 13px;
+
+  * {
+    cursor: pointer;
+  }
+
+  > span {
+    margin-right: 5px;
+  }
+
+  > div {
+    width: 16px;
+    height: 16px;
+    display: flex;
+  }
+
+  &:not(:last-child) {
+    margin: 0 0 10px;
+  }
+}

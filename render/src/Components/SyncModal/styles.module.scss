@@ -1,0 +1,45 @@
+.syncModal {
+  padding: 28px;
+
+  .buttonsBlock {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+
+    .activateBtn {
+      background: #1991eb;
+      border-radius: 4px;
+      border: none;
+      color: #fafafa;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      height: 48px;
+      line-height: 48px;
+      width: 242px;
+
+      &:hover {
+        background: #51abf0;
+      }
+    }
+
+    .logoutBtn {
+      background-color: transparent;
+      border-radius: 4px;
+      border: none;
+      color: #858e9b;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      width: 120px;
+
+      &:hover {
+        background-color: #d1ebff;
+        color: #1991eb;
+      }
+    }
+  }
+}

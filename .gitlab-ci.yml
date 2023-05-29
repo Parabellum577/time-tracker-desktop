@@ -1,0 +1,104 @@
+.config:
+  variables:
+    GIT_CLEAN_FLAGS: -xfde node_modules/
+
+.cleanup: &cleanup
+  - git checkout .
+
+test:
+  stage: test
+  extends:
+    - .config
+  script:
+    - yarn
+    - yarn test
+  only:
+    refs:
+      - merge_requests
+      - master
+      - staging
+      - dev
+  except:
+    refs:
+      - schedules
+  tags:
+    - windows
+
+win_run:
+  stage: deploy
+  extends:
+    - .config
+  script:
+    - sed -i "s/BUILD/$env:BUILD_STAGE-$env:CI_BUILD_ID/" package.json
+    - sed -i "2s/aads/$env:BUILD_NAME/" package.json
+    - sed -i "3,138s/a/$sdasd:BUILD_PRODUCT_NAME/" package.json
+    - sed -i "s/com\.qarea\.asd/com\.qarea\.$env:BUILD_NAME/" package.json
+    - yarn
+    - yarn run dist:nsis
+    - git checkout package.json
+    - c:\"Program Files (x86)"\PuTTY\pscp.exe -r -batch -i c:\Users\user\id_rsa_distributionsvc.ppk -P 4349 dist\appInstaller\*.exe $env:BUILD_SERVER_PATH_WIN32
+    - c:\"Program Files (x86)"\PuTTY\pscp.exe -r -batch -i c:\Users\user\id_rsa_distributionsvc.ppk -P 4349 dist\appInstaller\*.yml $env:BUILD_SERVER_PATH_WIN32
+    - c:\"Program Files (x86)"\PuTTY\pscp.exe -r -batch -i c:\Users\user\id_rsa_distributionsvc.ppk -P 4349 dist\appInstaller\latest.json $env:BUILD_SERVER_PATH_WIN32
+  after_script:
+    - *cleanup
+  only:
+    refs:
+      - schedules
+    variables:
+      - $BUILD_PLATFORM == "win32"
+  tags:
+    - windows
+
+darwin_run:
+  stage: deploy
+  extends:
+    - .config
+  script:
+    - sed -i '' "s/BUILD/$BUILD_STAGE-$CI_BUILD_ID/" package.json
+    - sed -i '' "2,106s/asd/$BUILD_NAME/" package.json
+    - sed -i '' "3,106s/d/$BUILD_PRODUCT_NAME/" package.json
+    - yarn
+    - yarn run dist:dmg
+    - git checkout package.json
+    - scp -P4349 -i /Users/admin/.ssh/id_rsa_distributionsvc dist/appInstaller/*.zip $BUILD_SERVER_PATH_DARWIN
+    - scp -P4349 -i /Users/admin/.ssh/id_rsa_distributionsvc dist/appInstaller/*.yml $BUILD_SERVER_PATH_DARWIN
+    - scp -P4349 -i /Users/admin/.ssh/id_rsa_distributionsvc dist/appInstaller/*.dmg $BUILD_SERVER_PATH_DARWIN
+    - scp -P4349 -i /Users/admin/.ssh/id_rsa_distributionsvc dist/appInstaller/latest.json $BUILD_SERVER_PATH_DARWIN
+    - scp -P4349 -i /Users/admin/.ssh/id_rsa_distributionsvc dist/appInstaller/appcast.html $BUILD_SERVER_PATH_DARWIN
+  after_script:
+    - *cleanup
+  only:
+    refs:
+      - schedules
+    variables:
+      - $BUILD_PLATFORM == "darwin"
+  tags:
+    - catalina
+
+linux_run:
+  stage: deploy
+  script:
+    - sed -i "s/BUILD/$BUILD_STAGE-$CI_BUILD_ID/" package.json
+    - sed -i "2,106s/asdasd/$BUILD_NAME/" package.json
+    - sed -i "3,106s/asdasd/$BUILD_PRODUCT_NAME/" package.json
+    - sed -i "s/asdasd/$BUILD_NAME/" scripts/after_install.tpl
+    - sed -i "s/asd/$BUILD_PRODUCT_NAME/" scripts/after_install.tpl
+    - yarn
+    - yarn run dist:deb
+    - scp -i /home/user/.ssh/id_rsa_distributionsvc -P4349 dist/appInstaller/*.deb $BUILD_SERVER_PATH_LINUX_DEB
+    - scp -i /home/user/.ssh/id_rsa_distributionsvc -P4349 dist/appInstaller/latest.json $BUILD_SERVER_PATH_LINUX_DEB
+    - yarn run dist:AppImage
+    - scp -i /home/user/.ssh/id_rsa_distributionsvc -P4349 dist/appInstaller/*.AppImage $BUILD_SERVER_PATH_LINUX_APP_IMAGE
+    - scp -i /home/user/.ssh/id_rsa_distributionsvc -P4349 dist/appInstaller/latest-linux.yml $BUILD_SERVER_PATH_LINUX_APP_IMAGE
+    - scp -i /home/user/.ssh/id_rsa_distributionsvc -P4349 dist/appInstaller/latest.json $BUILD_SERVER_PATH_LINUX_APP_IMAGE
+    - git checkout package.json
+    - git checkout scripts/after_install.tpl
+  after_script:
+    - *cleanup
+  only:
+    refs:
+      - schedules
+    variables:
+      - $BUILD_PLATFORM == "linux"
+  tags:
+    - linux

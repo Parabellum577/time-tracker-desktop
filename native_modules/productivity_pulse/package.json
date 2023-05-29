@@ -1,0 +1,21 @@
+{
+  "name": "productivity_pulse",
+  "version": "0.0.1",
+  "description": "productivitypulse plugin for TimeGuard",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.qarea.org/timeguard/plugins-pluginproductivitypulse.git"
+  },
+  "keywords": [
+    "TimeGuard",
+    "productivitypulse"
+  ],
+  "author": "Oleksii Naboichenko",
+  "homepage": "https://gitlab.qarea.org/timeguard/plugins-pluginproductivitypulse#readme",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "private": true,
+  "gypfile": true
+}

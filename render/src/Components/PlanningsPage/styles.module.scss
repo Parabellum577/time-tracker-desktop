@@ -1,0 +1,140 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: -webkit-fill-available;
+
+  .menu {
+    align-items: center;
+    color: $additional-color;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    height: 65px;
+    justify-content: space-between;
+    padding-right: 11px;
+
+    .choosenProject {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      .trackerIcon {
+        margin-right: 8px;
+        height: 22px;
+      }
+
+      .main {
+        height: 70px;
+        width: 265px;
+        box-sizing: border-box;
+
+        &.mainOpened {
+          width: 100vw;
+          z-index: 100;
+          height: 113px;
+          position: relative;
+          top: 30px;
+
+          .searchBar {
+            background: #fff;
+            border: 1px solid #c5cad5;
+          }
+        }
+
+        .projectsListDropdown {
+          max-height: 324px;
+          height: fit-content;
+          left: 0;
+          margin-top: 83px;
+          overflow: hidden auto;
+          position: absolute;
+          width: -webkit-fill-available;
+          z-index: 1;
+        }
+
+        .searchBar {
+          background: #3f4e5d;
+          border: 1px solid #2d353b;
+          box-shadow: 1px 2px 9px 0px #00000059;
+          color: #c3c3c3;
+          padding: 0;
+          padding-left: 10px;
+
+          .projectContent {
+            color: #c3c3c3;
+
+            .arrowDownBlock {
+              border-left: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .actionsBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 135px;
+    color: #858e9b;
+    fill: #858e9b;
+    text-align: center;
+
+    .tab {
+      cursor: pointer;
+      position: relative;
+
+      &:after {
+        content: '';
+        cursor: pointer;
+        background: transparent;
+        height: 2px;
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 24px;
+        border-radius: 1px;
+      }
+
+      &.activeTab {
+        fill: #fff;
+        color: #fff;
+
+        &:after {
+          background: #fff;
+        }
+      }
+
+      &.recentTabIcon {
+        position: relative;
+        top: -2px;
+        left: -2px;
+      }
+
+      * {
+        cursor: pointer;
+      }
+    }
+
+    > *:not(:last-child) {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: $divider-color;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 100;
+    overflow: hidden auto;
+    height: -webkit-fill-available;
+  }
+}

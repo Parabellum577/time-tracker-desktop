@@ -1,0 +1,162 @@
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  padding: 0 22px;
+
+  .projectStatusContainer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 13px 0 0;
+  }
+
+  .timeBlock {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+
+    .timeTitle {
+      align-items: center;
+      color: #3c8deb;
+      display: flex;
+
+      > i {
+        font-size: 20px;
+      }
+
+      > span {
+        font-size: 14px;
+        font-weight: 600;
+        margin-left: 5px;
+      }
+    }
+
+    .arrowIconDark {
+      position: relative;
+      top: 2px;
+
+      path {
+        fill: #333140;
+      }
+    }
+  }
+
+  .commentBlock {
+    margin: 0;
+  }
+
+  .confirmContainer {
+    bottom: 16px;
+    left: 0;
+    margin: 0 16px;
+    position: absolute;
+    width: -webkit-fill-available;
+
+    .divider {
+      background: #e9edf4;
+      height: 2px;
+      margin-bottom: 16px;
+    }
+
+    .assignBtn {
+      background: #3c8deb;
+      border-radius: 4px;
+      border: 1px solid transparent;
+      color: #fafafa;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      height: 52px;
+      letter-spacing: 0.3px;
+      position: relative;
+      width: -webkit-fill-available;
+
+      &:hover {
+        background: #51abf0;
+      }
+    }
+  }
+
+  .timeInput {
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #c5cad5;
+    height: 48px;
+    margin-top: 12px;
+    width: 166px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .timeSelectorMenu {
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 105%;
+      width: 100%;
+      z-index: 5;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 13px 13px;
+        cursor: pointer;
+        &:hover {
+          background: #f2f4f7;
+        }
+        &:first-child {
+          button {
+            border-radius: 4px 4px 0 0;
+          }
+        }
+
+        &:last-child {
+          button {
+            border-radius: 0 0 4px 4px;
+          }
+        }
+
+        span {
+          align-items: center;
+          background: transparent;
+          border: none;
+          color: #48555e;
+          display: flex;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 1;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+    }
+
+    > .arrowBlock {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      height: -webkit-fill-available;
+      width: 30%;
+      justify-content: center;
+
+      * {
+        cursor: pointer;
+      }
+    }
+
+    > div {
+      border: none;
+      width: -webkit-fill-available;
+    }
+
+    > span {
+      color: #000;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}

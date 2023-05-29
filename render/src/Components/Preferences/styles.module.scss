@@ -1,0 +1,195 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .menuBlock {
+    .menuTitle {
+      height: 52px;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      color: #fff;
+      text-align: left;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      border-bottom: 1px solid $divider-color;
+      margin: 0 32px;
+    }
+
+    .menuBody {
+      padding: 8px 32px;
+      font-size: 17px;
+      color: #fff;
+      font-weight: 450;
+      text-align: left;
+      letter-spacing: -0.01em;
+      border-bottom: 1px solid $divider-color;
+
+      .switchContainer {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        .hintCustomWrap {
+          display: flex;
+          width: 24px;
+          height: 24px;
+
+          &:hover svg use {
+            transition: 0.5s fill linear;
+            fill: #fff;
+          }
+
+          &:hover svg text {
+            transition: 0.5s fill linear;
+            fill: #333;
+          }
+        }
+      }
+
+      .switchBlock {
+        margin: 8px 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .customSwitchBase {
+          background: #858c9a;
+          width: 48px;
+          height: 28px;
+          border-radius: 16px;
+          cursor: pointer;
+
+          * {
+            cursor: pointer;
+          }
+
+          > span {
+            display: flex;
+            justify-content: flex-start;
+          }
+
+          .customChecked {
+            color: #cbced1;
+
+            .customBar {
+              background: transparent;
+            }
+          }
+        }
+
+        .withError {
+          background: #d82e37;
+        }
+
+        > .customRoot {
+          cursor: pointer;
+
+          > .customChecked {
+            color: #1bb934;
+            height: 100%;
+            transform: translateX(13px);
+            width: 12px;
+
+            + .customBar {
+              background: transparent;
+            }
+          }
+
+          & .checkedBar {
+            background-color: #76c545;
+            opacity: 1;
+            transform: inherit;
+          }
+        }
+
+        .customIcon {
+          cursor: pointer;
+          width: 18px;
+          height: 18px;
+          background-color: #fff;
+          margin-left: 4px;
+          transition: 0.3s;
+          box-shadow: none;
+
+          + input {
+            width: 22px;
+            height: 12px;
+            position: absolute;
+            top: initial;
+          }
+        }
+
+        .customIconChecked {
+          margin-left: 26px;
+          transition: 0.3s;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .afkBlock {
+      display: flex;
+      margin-bottom: 16px;
+      justify-content: space-between;
+      align-items: flex-end;
+      height: 55px;
+
+      > span {
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+
+      .timeBlock {
+        .timeTitle {
+          color: #a9b4bd;
+          font-size: 11px;
+          letter-spacing: 0.02em;
+          line-height: 24px;
+          text-align: left;
+        }
+
+        .time {
+          align-items: center;
+          background: #fff;
+          border-radius: 5px;
+          border: 2px solid transparent;
+          color: #000;
+          cursor: pointer;
+          display: flex;
+          font-size: 14px;
+          font-weight: bold;
+          height: 32px;
+          justify-content: space-between;
+          letter-spacing: 0.01em;
+          line-height: 32px;
+          text-align: center;
+          width: 76px;
+
+          &:hover {
+            border: 2px solid #1991eb;
+
+            .arrowIcon path {
+              fill: #1991eb;
+            }
+          }
+
+          * {
+            cursor: pointer;
+          }
+
+          > span {
+            margin-left: 12px;
+          }
+
+          .arrowIcon {
+            position: relative;
+            right: 6px;
+            top: 4px;
+          }
+        }
+      }
+    }
+  }
+}

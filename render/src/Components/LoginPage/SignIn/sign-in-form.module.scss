@@ -1,0 +1,187 @@
+.loginForm {
+  margin: 6vh 0 8vh;
+  width: 320px;
+
+  form {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .loginInputLabel {
+    color: #a9b4bd;
+    font-size: 11px;
+    line-height: 24px;
+    margin: 0;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .loginInputBlock {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 14px;
+    position: relative;
+    width: 100%;
+
+    .loginInputField {
+      background-color: #fff;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      font-size: 14px;
+      height: 35px;
+      padding: 7px 9px;
+      width: 100%;
+      box-sizing: border-box;
+
+      &:hover {
+        border: 2px solid #1991eb;
+      }
+    }
+
+    .inputWithError {
+      background-color: #ffecee;
+      border: 2px solid #ed1d41;
+    }
+  }
+
+  .loginInputBlock {
+    .loginInputFieldOverBlock {
+      background-color: #fff;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      width: 100%;
+      position: relative;
+
+      .inputWithError {
+        background-color: #ffecee;
+        border: 2px solid #ed1d41;
+      }
+
+      input {
+        background-color: #fff;
+        border-radius: 4px;
+        border: 2px solid transparent;
+        font-size: 14px;
+        position: relative;
+        height: 35px;
+        outline: none;
+        padding: 7px 30px 7px 9px;
+        width: 100%;
+
+        &:hover {
+          border: 2px solid #1991eb;
+        }
+      }
+
+      button {
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        outline: none;
+        position: absolute;
+        right: 0;
+        top: 5px;
+
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .eyeIcon {
+      cursor: pointer;
+      left: 92%;
+      position: absolute;
+      top: 38%;
+
+      .icon {
+        align-items: center;
+        display: flex;
+        width: 18px;
+
+        &:hover path {
+          fill: #68b8f5;
+        }
+      }
+
+      * {
+        cursor: pointer;
+      }
+    }
+
+    .forgotPass {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 7px;
+      text-decoration: blink;
+      margin-left: 71%;
+
+      p {
+        color: #1991eb;
+        cursor: pointer;
+        font-size: 12px;
+        position: relative;
+        text-decoration: none;
+
+        &:hover {
+          color: #93d0ff;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .errorIcon {
+    right: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 16px;
+    background: #ed1d41;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+
+    &:after {
+      content: '!';
+    }
+  }
+
+  .errorMessage {
+    background: #ed1d41;
+    border-radius: 0 0 4px 4px;
+    color: #fff;
+    font-size: 12px;
+    height: 21px;
+    padding: 12px 0 0 5px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  .signInBtn {
+    background: #1991eb;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    height: 48px;
+    margin-top: 5vh;
+    position: relative;
+    width: 100%;
+
+    &:hover {
+      background: #51abf0;
+    }
+  }
+}

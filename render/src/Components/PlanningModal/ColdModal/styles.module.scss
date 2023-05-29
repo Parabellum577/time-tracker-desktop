@@ -1,0 +1,192 @@
+.main {
+  background: #fafdff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+  padding: 24px 22px 18px;
+
+  .spinnerPage {
+    align-items: center;
+    display: flex;
+    height: 60%;
+    justify-content: center;
+    width: -webkit-fill-available;
+  }
+
+  & :last-child {
+    border-bottom: 0;
+  }
+
+  .searchBar {
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #3c8deb;
+    display: flex;
+    height: 50px;
+    padding: 0 8px;
+    width: -webkit-fill-available;
+
+    .projectContent {
+      align-items: center;
+      color: #fff;
+      display: flex;
+      font-size: 14px;
+
+      .snowFlake {
+        background: #3db1ef;
+        border-radius: 3px;
+        font-size: 14px;
+        margin-right: 12px;
+        padding: 3px;
+      }
+
+      > div {
+        margin-top: 3px;
+      }
+
+      > span {
+        font-weight: 600;
+      }
+
+      .trackerIcon {
+        margin-right: 5px;
+        width: 18px;
+      }
+    }
+
+    .arrowIconWhite {
+      position: relative;
+      top: 2px;
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    .inputField {
+      border: none;
+      color: #000;
+      font-size: 17px;
+      font-weight: 500;
+      margin: 0 10px;
+      width: calc(100% - 20px);
+    }
+
+    .searchIcon {
+      height: 26px;
+      position: relative;
+      top: 1px;
+      width: 26px;
+
+      g {
+        fill: #808da3;
+      }
+    }
+
+    .chosenProjectBadge {
+      align-items: center;
+      background-color: #333d47;
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: #fff;
+      display: flex;
+      font-size: 12px;
+      font-weight: 600;
+      height: 28px;
+      justify-content: space-between;
+      margin-left: 10px;
+      padding: 0 8px;
+      width: 113px;
+
+      & > div {
+        width: 14px;
+      }
+
+      p {
+        margin: 0 8px 0 2px;
+        max-height: -webkit-fill-available;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .closeBadgeIcon {
+        cursor: pointer;
+        font-size: 14px;
+      }
+    }
+
+    .issueBadge {
+      background: #76c545;
+      padding: 5px 0px 5px 8px;
+      width: 104px;
+
+      .closeBlock {
+        align-items: center;
+        border-left: 1px solid #ffffff61;
+        display: flex;
+        height: -webkit-fill-available;
+        margin: 0 2px;
+        padding: 0 2px;
+      }
+
+      .separator {
+        background: #fff;
+        height: -webkit-fill-available;
+        opacity: 0.3;
+        width: 1px;
+      }
+    }
+
+    .closeButton {
+      color: #cfd3dc;
+      cursor: pointer;
+      font-size: 22px;
+
+      * {
+        cursor: pointer;
+      }
+
+      &:hover {
+        color: #68b8f5;
+      }
+    }
+  }
+
+  > .projectBlock {
+    background: #373f49;
+    border: 2px solid transparent;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    .arrowDownBlock {
+      align-items: center;
+      border-left: 1px solid #2d353b;
+      display: flex;
+      height: 65%;
+      padding-left: 8px;
+    }
+  }
+}
+
+.dropDown {
+  background: #fff;
+}
+
+.higlighted {
+  background-color: #48adfa5c;
+}
+
+.modalContainer {
+  background: #fafdff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+}

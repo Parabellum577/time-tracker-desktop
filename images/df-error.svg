@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0002.-Settings--Integrations-#03" transform="translate(-75.000000, -415.000000)">
+            <g id="Cell/add-integration" transform="translate(0.000000, 381.000000)">
+                <g id="Icon/s/close-s/gray" transform="translate(75.000000, 34.000000)">
+                    <circle id="Tag---Yellow" fill="#E3425F" cx="8" cy="8" r="6.66666667"></circle>
+                    <path d="M7.51624549,4 L8.47894103,4 L8.39711191,8.83538532 L7.59807461,8.83538532 L7.51624549,4 Z M8.00240674,11.3333333 C7.61251504,11.3333333 7.33333333,11.0424077 7.33333333,10.6361149 C7.33333333,10.2248062 7.61251504,9.93388053 8.00240674,9.93388053 C8.39229844,9.93388053 8.66666667,10.2248062 8.66666667,10.6361149 C8.66666667,11.0424077 8.39229844,11.3333333 8.00240674,11.3333333 Z" id="!" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

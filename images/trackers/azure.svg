@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="timetracker-integrations" transform="translate(-995.000000, -497.000000)" fill="#0072C6" fill-rule="nonzero">
+            <g id="Block/integrations" transform="translate(-1.000000, 1.000000)">
+                <g id="Block/tracker-dropdiwn" transform="translate(974.000000, 476.000000)">
+                    <g id="azure-1" transform="translate(22.000000, 20.000000)">
+                        <path d="M34.8958025,0 L16.0671605,20.5048062 L0,56.7218605 L14.4869136,56.7218605 L34.8958025,0 Z M37.4004938,4.79751938 L29.3649383,33.2403101 L44.7723457,57.5503876 L14.8819753,64 L63.8696296,64 L37.4004938,4.79751938 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

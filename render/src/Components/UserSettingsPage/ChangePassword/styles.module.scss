@@ -1,0 +1,59 @@
+.changePasswordBlock {
+  .inputRow {
+    margin: 0 0 15px;
+
+    &:nth-child(3n) {
+      margin: 0 0 25px;
+    }
+  }
+
+  .inputWrap {
+    position: relative;
+
+    input {
+      padding: 0 38px 0 10px;
+    }
+  }
+}
+
+.iconBlock {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  display: flex;
+
+  &Show {
+    &:after {
+      content: '';
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+      height: 2px;
+      background: #858e9b;
+      cursor: pointer;
+    }
+  }
+
+  > div {
+    display: flex;
+  }
+
+  * {
+    cursor: pointer;
+  }
+}
+
+.btnWrap {
+  display: flex;
+  align-items: center;
+
+  button {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

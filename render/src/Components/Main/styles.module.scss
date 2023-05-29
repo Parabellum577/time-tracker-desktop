@@ -1,0 +1,14 @@
+.content {
+  background-color: $app-body-background;
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+  position: relative;
+}
+
+.body {
+  background-color: $app-body-background;
+  display: flex;
+  flex-grow: 100;
+  max-height: calc(var(--current-app-height) - 104px);
+}

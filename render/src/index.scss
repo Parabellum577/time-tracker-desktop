@@ -1,0 +1,131 @@
+@import './reset.scss';
+
+body {
+  font-family: 'SFUIDisplay';
+  padding: 0;
+  background-color: $background;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+p,
+input,
+button {
+  font-family: 'SFUIDisplay';
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: inherit;
+  text-decoration: underline;
+}
+
+[role='button'] {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.3rem;
+  background-color: #9fa7b3;
+}
+
+:not(input):not(textarea):not(md-icon),
+:not(input):not(textarea):not(md-icon)::after,
+:not(input):not(textarea):not(md-icon)::before {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+input,
+button,
+textarea,
+:focus {
+  outline: none;
+  resize: none;
+}
+
+textarea::-webkit-scrollbar-track-piece {
+  border-color: $background;
+}
+
+.isvg svg {
+  height: inherit;
+  width: inherit;
+}
+
+/** Material icons */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./Fonts/Material-Font-Icons.woff2');
+}
+
+/** Ultra Light */
+@font-face {
+  font-family: 'SFUIDisplay';
+  font-weight: 100;
+  src: url('./Fonts/SFUIDisplay/SFUIDisplay-Ultralight.woff2');
+}
+
+/** Thin */
+@font-face {
+  font-family: 'SFUIDisplay';
+  font-weight: 200;
+  src: url('./Fonts/SFUIDisplay/SFUIDisplay-Thin.woff2');
+}
+
+/** Light */
+@font-face {
+  font-family: 'SFUIDisplay';
+  font-weight: 300;
+  src: url('./Fonts/SFUIDisplay/SFUIDisplay-Light.woff2');
+}
+
+/** Regular */
+@font-face {
+  font-family: 'SFUIDisplay';
+  font-weight: 400;
+  src: url('./Fonts/SFUIDisplay/SFUIDisplay-Regular.woff2');
+}
+
+/** Medium */
+@font-face {
+  font-family: 'SFUIDisplay';
+  font-weight: 500;
+  src: url('./Fonts/SFUIDisplay/SFUIDisplay-Medium.woff2');
+}
+
+/** Semi Bold */
+@font-face {
+  font-family: 'SFUIDisplay';
+  font-weight: 600;
+  src: url('./Fonts/SFUIDisplay/SFUIDisplay-Semibold.woff2');
+}
+
+/** Bold */
+@font-face {
+  font-family: 'SFUIDisplay';
+  font-weight: 700;
+  src: url('./Fonts/SFUIDisplay/SFUIDisplay-Bold.woff2');
+}
+
+/** Heavy */
+@font-face {
+  font-family: 'SFUIDisplay';
+  font-weight: 800;
+  src: url('./Fonts/SFUIDisplay/SFUIDisplay-Heavy.woff2');
+}
+
+/** Black */
+@font-face {
+  font-family: 'SFUIDisplay';
+  font-weight: 900;
+  src: url('./Fonts/SFUIDisplay/SFUIDisplay-Black.woff2');
+}

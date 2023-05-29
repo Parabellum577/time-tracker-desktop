@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Store] Plannings Sagas [Failed] Should emit GetOpenPlannings 1`] = `
+Object {
+  "done": false,
+  "value": Object {
+    "payload": Object {
+      "code": 100,
+      "message": "SOME_ERROR",
+    },
+    "type": "plannings/GET_OPEN_PLANNINGS_FAILURE",
+  },
+}
+`;
+
+exports[`[Store] Plannings Sagas [Success] Should update spent time every seconds 1`] = `
+Array [
+  Object {
+    "error": undefined,
+    "meta": undefined,
+    "payload": Object {
+      "PlanningID": 2,
+      "additionalTime": 0,
+      "field": "SpentOnline",
+    },
+    "type": "plannings/TIME_TICK_IN_ACTIVE_PLANNING",
+  },
+]
+`;
+
+exports[`[Store] Plannings Sagas [Success] Should update spent time every seconds 2`] = `
+Array [
+  Object {
+    "error": undefined,
+    "meta": undefined,
+    "payload": Object {
+      "PlanningID": 2,
+      "additionalTime": 1.001,
+      "field": "SpentOnline",
+    },
+    "type": "plannings/TIME_TICK_IN_ACTIVE_PLANNING",
+  },
+]
+`;
+
+exports[`[Store] Plannings Sagas [Success] Should update spent time every seconds 3`] = `
+Array [
+  Object {
+    "error": undefined,
+    "meta": undefined,
+    "payload": Object {
+      "PlanningID": 2,
+      "additionalTime": 0,
+      "field": "SpentOnline",
+    },
+    "type": "plannings/TIME_TICK_IN_ACTIVE_PLANNING",
+  },
+]
+`;

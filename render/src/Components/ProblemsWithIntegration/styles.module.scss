@@ -1,0 +1,31 @@
+.link {
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+
+  .container {
+    height: 40px;
+    width: -webkit-fill-available;
+    background: #f7526f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fafafa;
+    padding: 0 16px;
+    cursor: pointer;
+
+    * {
+      cursor: pointer;
+    }
+
+    .arrowIcon {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}

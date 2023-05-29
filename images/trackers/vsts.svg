@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0002.-Settings--Integrations-#02" transform="translate(-244.000000, -867.000000)" fill="#0078D7" fill-rule="nonzero">
+            <g id="Header/32" transform="translate(0.000000, 148.000000)">
+                <g id="Group">
+                    <g id="Group-2">
+                        <g id="Group-3">
+                            <g id="Group-4" transform="translate(0.000000, 1.000000)">
+                                <g id="Cell/add-integration" transform="translate(220.000000, 704.000000)">
+                                    <g id="Logo/tracker/color/vsts" transform="translate(24.000000, 14.000000)">
+                                        <g id="logo_vs-team-services" transform="translate(2.250000, 2.250000)">
+                                            <path d="M23.625,0 L23.625,27.0703125 L0,23.54625 L8.25398437,26.3221875 L8.25398437,26.3221875 L8.25398437,26.3221875 L23.625,31.5 L31.5,28.2220313 L31.5,3.27796875 L23.625,0 Z M3.9375,16.734375 L1.4765625,16.1683594 L1.4765625,11.1529687 L3.22875,8.9775 L9.84375,6.42796875 L9.84375,4.5871875 L14.9575781,8.6034375 L3.9375,10.828125 L3.9375,16.734375 Z M14.765625,18.2109375 L14.765625,8.52960937 L19.6875,7.81101562 L19.6875,18.7326563 L15.2578125,22.3059375 L8.3671875,20.0763281 L8.3671875,22.3157813 L3.75539062,16.734375 L14.765625,18.2109375 Z" id="iconBg"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Store] CurrentUser Reducer [Failure] Should handle getCurrentUser 1`] = `
+Object {
+  "currentUser": null,
+  "defaultUserSettings": Object {
+    "cold_settings": Object {
+      "IssueID": "",
+      "ProjectID": "",
+      "TrackerID": 0,
+    },
+    "idle": "10",
+    "isAppDefaultLaunch": "off",
+    "isAutoDailyReport": "on",
+    "isDesktopInstalled": "off",
+    "isInstantColdStart": "off",
+    "isNotifications": "on",
+    "isOverSpentMode": "off",
+    "isScreenshootNotifications": "off",
+    "isShowedIntegrationTutorial": "off",
+    "isShowedPersonalProjectTutorial": "off",
+    "isShowedSearchBarTutorial": "off",
+    "isShowedTaskAssignTutorial": "off",
+    "isSound": "off",
+  },
+}
+`;
+
+exports[`[Store] CurrentUser Reducer [Success] [Snapshot] Should handle getCurrentUser 1`] = `
+Object {
+  "currentUser": Object {
+    "Activated": true,
+    "Avatar": "",
+    "ConfirmationSent": 0,
+    "Deleted": false,
+    "FirstName": "Sam",
+    "IsAdmin": false,
+    "IsAnonymous": false,
+    "LastName": "Smith",
+    "Login": "test@gmail.com",
+    "PasswordUpdatedAt": 0,
+    "Phone": "911",
+    "Registered": 1538382878,
+    "Role": "Other",
+    "Skype": "whatIsIt",
+    "SubscribeOnMail": false,
+    "Timezone": 10800,
+    "UpdatedAt": 1555054724,
+    "UserID": 27311,
+  },
+  "defaultUserSettings": Object {
+    "cold_settings": Object {
+      "IssueID": "",
+      "ProjectID": "",
+      "TrackerID": 0,
+    },
+    "idle": "10",
+    "isAppDefaultLaunch": "off",
+    "isAutoDailyReport": "on",
+    "isDesktopInstalled": "off",
+    "isInstantColdStart": "off",
+    "isNotifications": "on",
+    "isOverSpentMode": "off",
+    "isScreenshootNotifications": "off",
+    "isShowedIntegrationTutorial": "off",
+    "isShowedPersonalProjectTutorial": "off",
+    "isShowedSearchBarTutorial": "off",
+    "isShowedTaskAssignTutorial": "off",
+    "isSound": "off",
+  },
+}
+`;
+
+exports[`[Store] CurrentUser Reducer [Success] [Snapshot] Should handle updateCurrentUser 1`] = `
+Object {
+  "currentUser": Object {
+    "Activated": true,
+    "Avatar": "",
+    "ConfirmationSent": 0,
+    "Deleted": false,
+    "FirstName": "Sam",
+    "IsAdmin": false,
+    "IsAnonymous": false,
+    "LastName": "Smith",
+    "Login": "test@gmail.com",
+    "PasswordUpdatedAt": 0,
+    "Phone": "911",
+    "Registered": 1538382878,
+    "Role": "Other",
+    "Skype": "whatIsIt",
+    "SubscribeOnMail": false,
+    "Timezone": 10800,
+    "UpdatedAt": 1555054724,
+    "UserID": 27311,
+  },
+  "defaultUserSettings": Object {
+    "cold_settings": Object {
+      "IssueID": "",
+      "ProjectID": "",
+      "TrackerID": 0,
+    },
+    "idle": "10",
+    "isAppDefaultLaunch": "off",
+    "isAutoDailyReport": "on",
+    "isDesktopInstalled": "off",
+    "isInstantColdStart": "off",
+    "isNotifications": "on",
+    "isOverSpentMode": "off",
+    "isScreenshootNotifications": "off",
+    "isShowedIntegrationTutorial": "off",
+    "isShowedPersonalProjectTutorial": "off",
+    "isShowedSearchBarTutorial": "off",
+    "isShowedTaskAssignTutorial": "off",
+    "isSound": "off",
+  },
+}
+`;

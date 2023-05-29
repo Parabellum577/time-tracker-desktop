@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0004.-Landing--Integration-Desktop-#01" transform="translate(-993.000000, -2456.000000)">
+            <g id="Block/integrations" transform="translate(-1.000000, 1960.000000)">
+                <g id="Block/tracker-dropdiwn" transform="translate(974.000000, 476.000000)">
+                    <g id="Logo/tracker/redmine" transform="translate(20.000000, 20.000000)">
+                        <g id="Group-4" transform="translate(0.000000, 10.000000)">
+                            <path d="M0.785066667,43.8115556 L14.4241778,43.8115556 L15.3457778,32.0341333 L2.62826667,29.2465778 L0.785066667,43.8115556 Z M61.4926222,29.2451556 L48.7978667,32.0327111 L49.7152,43.8101333 L63.3628444,43.8101333 L61.4926222,29.2451556 Z" id="Shape" fill="#9C0000" fill-rule="nonzero"></path>
+                            <path d="M3.24693333,27.0776889 L15.3244444,30.1681778 L18.1105778,19.9395556 L8.20195556,14.6602667 L3.24693333,27.0776889 Z M55.9203556,14.6816 L46.0117333,19.9608889 L48.7978667,30.1895111 L60.8796444,27.1047111 L55.9203556,14.6816 Z" id="Shape" fill="#B50808" fill-rule="nonzero"></path>
+                            <path d="M9.14488889,12.8426667 L18.7548444,18.1162667 L26.496,12.8426667 L19.0535111,4.47857778 L9.14488889,12.8426667 Z M45.0673778,4.47715556 L37.6519111,12.8426667 L45.3888,18.1162667 L54.9930667,12.8426667 L45.0673778,4.47715556 Z" id="Shape" fill="#C61818" fill-rule="nonzero"></path>
+                            <polygon id="Path" fill="#CE3129" points="36.4046222 1.06808889 28.0405333 1.06808889 21.5196444 3.23128889 28.6592 11.5953778 35.7816889 11.5953778 41.9783111 3.23128889"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

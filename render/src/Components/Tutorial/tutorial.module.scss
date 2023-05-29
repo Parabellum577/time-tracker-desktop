@@ -1,0 +1,159 @@
+.tutorialIndicator {
+  background: #73c546;
+  border-radius: 50%;
+  height: 16px;
+  position: absolute;
+  width: 16px;
+
+  &:before {
+    animation: pulse 0.65s infinite;
+    background: #73c546;
+    border-radius: 50%;
+    bottom: 0;
+    box-shadow: 0 0 0 #73c546;
+    content: '';
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #73c546;
+    opacity: 0.6;
+  }
+  70% {
+    box-shadow: 0 0 0 16px #73c546;
+    opacity: 0;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #73c546;
+    opacity: 0;
+  }
+}
+
+.tutorialWrap {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+  &.firstTutorialStep {
+    .tutorialIndicator {
+      left: 50px;
+      top: 94px;
+    }
+
+    .arrowIcon {
+      left: 44px;
+    }
+  }
+
+  &.secondTutorialStep {
+    .tutorialIndicator {
+      right: 103px;
+      top: 87px;
+    }
+
+    .arrowIcon {
+      right: 44px;
+    }
+  }
+
+  &.thirdTutorialStep {
+    .tutorialIndicator {
+      right: 60px;
+      top: 90px;
+    }
+
+    .iconBlock {
+      width: 69px;
+      height: 69px;
+    }
+
+    .arrowIcon {
+      right: 16px;
+    }
+  }
+}
+
+.modalWindow {
+  background: #fafdff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #333;
+  color: #394249;
+  font-size: 16px;
+  font-weight: 500;
+  height: 390px;
+  left: 8px;
+  line-height: 28px;
+  padding: 50px 30px;
+  position: absolute;
+  right: 8px;
+  text-align: center;
+  top: 41.5%;
+  transform: translateY(-50%);
+
+  .arrowIcon {
+    background: #fafdff;
+    border-radius: 5px;
+    height: 30px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: -2px;
+    transform: rotate(-45deg);
+    width: 35px;
+    z-index: -1;
+
+    &:before {
+      background: #fff;
+      content: '';
+      position: absolute;
+      right: 5px;
+      top: 0;
+      transform-origin: inherit;
+      transform: rotate(45deg);
+    }
+  }
+
+  .iconBlock {
+    align-items: center;
+    display: flex;
+    height: 64px;
+    margin: 0 auto 20px;
+    width: 64px;
+  }
+
+  h3 {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 20px;
+  }
+
+  p {
+    margin: 0 0 55px;
+  }
+
+  .btnNext {
+    background: #1991eb;
+    border-radius: 4px;
+    border: none;
+    color: #fafafa;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    height: 48px;
+    line-height: 1;
+    max-width: 188px;
+    padding: 15px;
+    width: 100%;
+  }
+}

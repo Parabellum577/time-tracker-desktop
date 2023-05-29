@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#1991EB" offset="0%"></stop>
+            <stop stop-color="#0A78CA" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0000.-Stuleguide-#01" transform="translate(-67.000000, -1422.000000)">
+            <g id="Logo/icon" transform="translate(67.000000, 1422.000000)">
+                <rect id="Rectangle" fill="url(#linearGradient-1)" fill-rule="evenodd" x="0" y="0" width="96" height="96" rx="21"></rect>
+                <path d="M52.5135087,24 L52.5135087,34.6666667 L41.9622117,34.6666667 C32.6574814,34.6666667 25,42.8 25,53.3333333 C25,63.8666667 32.6574814,72 41.9622117,72 L63.1538462,72 L63.1538462,44.7111111 L52.5135087,44.7111111 L63.1093259,34.0444444 L63.1093259,24 L52.5135087,24 Z M52.5135087,53.3333333 L52.5135087,61.9555556 L44.054663,61.9555556 C39.1574365,61.9555556 35.6403375,58.6222222 35.6403375,53.3333333 C35.6403375,48.0444444 39.2019567,44.7111111 44.054663,44.7111111 L52.5135087,44.7111111 L52.5135087,53.3333333 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

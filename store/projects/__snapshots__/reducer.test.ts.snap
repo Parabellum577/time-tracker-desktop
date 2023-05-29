@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Store] Project Reducer [Failure] Should handle getProjectSettings 1`] = `
+Object {
+  "projects": Array [],
+  "projectsIssues": Array [],
+  "projectsSettings": Array [],
+}
+`;
+
+exports[`[Store] Project Reducer [Success] [Snapshot] Should handle getProjectSettings 1`] = `
+Object {
+  "projects": Array [],
+  "projectsIssues": Array [],
+  "projectsSettings": Array [
+    Object {
+      "project": "project1",
+      "settings": Array [
+        Object {
+          "Key": "key1",
+          "Value": "value2",
+        },
+      ],
+    },
+  ],
+}
+`;

@@ -1,0 +1,49 @@
+.passBlock {
+  &:not(:last-child) {
+    margin: 0 0 30px;
+  }
+
+  .passInputWrap {
+    position: relative;
+
+    input {
+      margin: 0;
+      padding: 0 37px 0 10px;
+    }
+
+    &:not(:last-child) {
+      margin: 0 0 30px;
+    }
+  }
+
+  .iconBlock {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    display: flex;
+
+    &Show {
+      &:after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+        height: 2px;
+        background: #858e9b;
+        cursor: pointer;
+      }
+    }
+
+    > div {
+      display: flex;
+    }
+
+    * {
+      cursor: pointer;
+    }
+  }
+}

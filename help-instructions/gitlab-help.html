@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+    <title>GITLAB</title>
+  </head>
+  <body>
+    <div class="help-component-container">
+      <p class="help-component-title">OAuth connect Gitlab (Self-hosted &amp; Enterprise )</p>
+      <ol>
+        <li class="help-component-list">Sign in to Gitlab</li>
+        <li class="help-component-list">Go to Settings -&gt; Applications</li>
+        <li class="help-component-list">Name field - enter Application name (arbitrary)</li>
+        <li class="help-component-list">
+          Redirect URI field -&gt; paste
+          <strong title="Click To Copy" style="cursor: pointer; color: blue;"> https://web.timetracker.com/oauth</strong>
+        </li>
+        <li class="help-component-list">
+          Mark <strong>`api`</strong> scope and click <strong>`Save Application`</strong> button (Application ID and
+          Secret key are created)
+          <img
+            src="./images/54ab8fd1fb56b0a2856a46c6250863ee.png"
+            alt="You track support image"
+            class="help-component-img"
+          />
+        </li>
+        <li class="help-component-list">
+          Paste Application ID and Secret key into corresponding fields
+        </li>
+        <li class="help-component-list">Click <strong>`Login via Gitab`</strong> button</li>
+      </ol>
+    </div>
+  </body>
+</html>

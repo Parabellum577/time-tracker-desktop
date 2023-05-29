@@ -1,0 +1,5 @@
+.tokenBlock {
+  &:not(:last-child) {
+    margin: 0 0 30px;
+  }
+}

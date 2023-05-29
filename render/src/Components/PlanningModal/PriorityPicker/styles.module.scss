@@ -1,0 +1,106 @@
+.actionItem {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #dde3ed;
+  cursor: pointer;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  margin: auto 8px;
+  position: relative;
+  width: 36px;
+
+  * {
+    cursor: pointer;
+  }
+}
+
+.priorityMenu {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 105%;
+  width: 184px;
+  z-index: 5;
+
+  li {
+    &:first-child {
+      button {
+        border-radius: 4px 4px 0 0;
+      }
+    }
+
+    &:last-child {
+      button {
+        border-radius: 0 0 4px 4px;
+      }
+    }
+
+    button {
+      align-items: center;
+      background: transparent;
+      border: none;
+      color: #48555e;
+      display: flex;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1;
+      padding: 9px 13px;
+      text-decoration: none;
+      width: 100%;
+
+      > div {
+        align-items: center;
+        display: flex;
+        height: 20px;
+        margin-right: 7px;
+        width: 20px;
+      }
+
+      &:hover {
+        background: #f2f4f7;
+      }
+    }
+  }
+}
+
+.priority {
+  path {
+    fill: #c3c9d4;
+  }
+
+  &.priorityLow {
+    path {
+      fill: $additional-color;
+    }
+  }
+
+  &.priorityMedium {
+    path {
+      fill: #ddcf53;
+    }
+  }
+
+  &.priorityHigh {
+    path {
+      fill: #ff9e30;
+    }
+  }
+
+  &.priorityNormal {
+    path {
+      fill: #73c546;
+    }
+  }
+
+  &.priorityCritical,
+  &.priorityUrgent {
+    path {
+      fill: #ed1d41;
+    }
+  }
+}

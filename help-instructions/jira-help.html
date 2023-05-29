@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="./index.css" rel="stylesheet" type="text/css" />
+    <title>JIRA</title>
+  </head>
+  <body>
+    <div class="help-component-container">
+      <p class="help-component-title">Login via Jira Oauth</p>
+      <ol>
+        <li class="help-component-list">
+          Go to Jira Settings <br />[Cloud Jira] Settings &gt; Products &gt; Applications Links <br />[Server Jira]
+          Settings &gt; Applications &gt; Applications Links
+        </li>
+        <li class="help-component-list">
+          Enter URL:
+          <span id="timetracker-link">
+            <strong title="Click To Copy" style="cursor: pointer; color: blue;">https://web.timetracker.com</strong></span
+          >
+          and click "Create new link" button
+        </li>
+        <li class="help-component-list">
+          Set Application Name:
+          <strong>'timetracker'</strong>
+        </li>
+        <li class="help-component-list">
+          Mark <strong>"Create incoming link"</strong> checkbox and click <strong>Continue</strong>
+        </li>
+        <li class="help-component-list">
+          Enter Consumer Key:
+          <strong>'OauthKey'</strong>
+          , Consumer Name:
+          <strong>'QArea'</strong>
+          , set <strong>Public Key</strong>
+          <div class="help-component-code-key">
+            <p>-----BEGIN PUBLIC KEY-----</p>
+            <code title="Click To Copy">
+              MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDttfuRjH7LUkY7ySkB6tWCF2Tx
+              XfW7x0I2VKIVi0pPLlaorZYM4tBx6nykjBz3Z33l/83ys5IQc2P/jyE7bA1DJM5k
+              6C97whIqa+5ab+KeZlXeZQ2g5+fM1o9kyQ8Ew1s0vy9qDL2DYTPBrCiqG4bemPAj V1EKoN0kFLF8/UTVyQIDAQAB</code
+            >
+            <p>-----END PUBLIC KEY-----</p>
+          </div>
+        </li>
+        <li class="help-component-list">
+          Other required fields can be filled with random characters
+        </li>
+        <li class="help-component-list">
+          Click
+          <strong>Continue</strong>
+        </li>
+      </ol>
+    </div>
+    <script>
+      const timetrackerLink = document.getElementById('timetracker-link')
+      const codeText = document.querySelector('code')
+      const keyBlock = document.querySelector('.help-component-code-key')
+      const linkBlock = document.querySelector('.help-component-list:nth-child(4)')
+      let isClicked = false
+
+      codeText.onclick = () => {
+        copy(codeText, keyBlock)
+      }
+
+      timetrackerLink.onclick = () => {
+        copy(timetrackerLink, linkBlock)
+      }
+
+      function copy(placeToClick, placeToMsg) {
+        while (!isClicked) {
+          isClicked = true
+          const selection = window.getSelection()
+          const range = document.createRange()
+          range.selectNodeContents(placeToClick)
+          selection.removeAllRanges()
+          selection.addRange(range)
+          document.execCommand('copy')
+          selection.removeRange(range)
+          const span = document.createElement('span')
+          const text = document.createTextNode('Link is copied!')
+          span.appendChild(text)
+          span.classList.add('hint-copy')
+
+          placeToMsg.appendChild(span)
+
+          setTimeout(() => {
+            isClicked = false
+            placeToMsg.removeChild(span)
+          }, 2000)
+        }
+      }
+
+      // timetrackerLink.onclick = () => {
+      //   const selection = window.getSelection()
+      //   const range = document.createRange()
+      //   range.selectNodeContents(timetrackerLink)
+      //   selection.removeAllRanges()
+      //   selection.addRange(range)
+      //   document.execCommand('copy')
+      //   selection.removeRange(range)
+      // }
+    </script>
+  </body>
+</html>

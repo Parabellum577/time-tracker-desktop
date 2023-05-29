@@ -1,0 +1,19 @@
+.offlineNotification {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  background: #645a5a;
+  padding: 0 16px;
+  height: 40px;
+  min-height: 40px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 500;
+
+  > div {
+    margin-right: 10px;
+    display: flex;
+    width: 18px;
+    height: 18px;
+  }
+}

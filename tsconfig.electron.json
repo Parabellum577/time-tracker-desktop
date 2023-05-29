@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
+    "sourceMap": true,
+    "outDir": "./build",
+    "baseUrl": ".",
+    "target": "es2018",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "*": ["node_modules/*"],
+      "@services/*": ["./services/*"],
+      "@store/*": ["./store/*"],
+      "@store": ["./store/index"],
+      "@api": ["./services/api.ts"],
+      "@api-types": ["./services/api-types.ts"],
+      "@types": ["./services/types.ts"],
+      "@components/*": ["./render/src/Components/*"],
+      "@images/*": ["./images/*"],
+      "@test-helpers/*": ["./test-helpers/*"],
+      "@utils": ["./utils/index.ts"],
+      "@Routers": ["./render/src/Routers/index.tsx"],
+      "@electronMain/*": ["./electron-main/*"],
+      "@openWindow": ["./services/openWindow.ts"]
+    },
+    "skipLibCheck": true
+  },
+
+  "files": ["./globals.d.ts"],
+  "include": ["electron-main/**/*", "store/**/*", "services/**/*", "Services/**/*", "images/*"]
+}

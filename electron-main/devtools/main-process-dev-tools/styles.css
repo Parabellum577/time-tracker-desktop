@@ -1,0 +1,43 @@
+body {
+  display: flex;
+}
+
+.network-panel {
+  min-width: 420px;
+  height: -webkit-fill-available;
+  overflow: auto;
+}
+
+.network-panel > table {
+  width: 400px;
+}
+
+.request {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+}
+
+.request.pending {
+  background-color: #fff70085;
+}
+
+.request.success {
+  background-color: #31d21e;
+}
+
+.request.error {
+  background-color: #ff3d00;
+}
+
+.preview-request-container {
+  margin-left: 10px;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  overflow: auto;
+}
+
+.selected-request {
+  background-color: #aeecff;
+}

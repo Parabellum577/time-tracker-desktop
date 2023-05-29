@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="24px" viewBox="0 0 26 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M8.41421356,10 L15.5857864,10 C16.1380712,10 16.5857864,10.4477153 16.5857864,11 C16.5857864,11.2652165 16.4804296,11.5195704 16.2928932,11.7071068 L12.7071068,15.2928932 C12.3165825,15.6834175 11.6834175,15.6834175 11.2928932,15.2928932 L7.70710678,11.7071068 C7.31658249,11.3165825 7.31658249,10.6834175 7.70710678,10.2928932 C7.89464316,10.1053568 8.14899707,10 8.41421356,10 L8.41421356,10 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0003.-Settings--Preferences-#01" transform="translate(-383.000000, -495.000000)">
+            <g id="Group-10" transform="translate(0.000000, 425.000000)">
+                <g id="Input/default" transform="translate(31.000000, 42.000000)">
+                    <g id="Group-9" transform="translate(0.957861, 0.000000)">
+                        <g id="Icon/s/close-s/gray" transform="translate(364.042139, 40.000000) rotate(-360.000000) translate(-364.042139, -40.000000) translate(352.042139, 28.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Rectangle" fill="#8793AB" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

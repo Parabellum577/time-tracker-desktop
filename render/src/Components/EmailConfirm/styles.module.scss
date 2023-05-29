@@ -1,0 +1,28 @@
+.confirmEmailBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(235, 145, 10);
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  max-height: 40px;
+  min-height: 40px;
+  height: 100%;
+  box-sizing: border-box;
+
+  p {
+    margin-right: 5px;
+  }
+
+  button {
+    background: none;
+    color: #fff;
+    line-height: 1;
+    font-size: 16px;
+    border: none;
+    text-decoration: underline;
+    padding: 0;
+    cursor: pointer;
+  }
+}

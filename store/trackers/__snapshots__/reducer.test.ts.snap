@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Store] Trackers Reducer [Success] [Snapshot] Should handle GetUserTrackers 1`] = `
+Object {
+  "userTrackers": Array [
+    Object {
+      "CredentialType": "string",
+      "Data": "string",
+      "Error": "string",
+      "ID": 0,
+      "ParentID": 0,
+      "Status": true,
+      "TrackerUserMail": "string",
+      "Type": "string",
+      "URL": "string",
+    },
+  ],
+}
+`;

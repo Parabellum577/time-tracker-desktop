@@ -1,0 +1,80 @@
+.stateItem {
+  align-items: center;
+  background-color: #f2f4f7;
+  border-radius: 18px;
+  border: 1px solid #dde3ed;
+  color: #262f37;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 4px 13px;
+  position: relative;
+  margin: 0 0 10px;
+
+  * {
+    cursor: pointer;
+  }
+
+  mark {
+    background: transparent;
+    color: #1991eb;
+  }
+
+  .arrowIcon {
+    pointer-events: none;
+    &Active {
+      transform: rotate(180deg);
+    }
+  }
+
+  .menu {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
+    padding: 0;
+    position: absolute;
+    width: 184px;
+    z-index: 5;
+    overflow: hidden scroll;
+    max-height: 168px;
+
+    &Status {
+      left: 50%;
+      bottom: calc(100% + 10px);
+    }
+
+    &Type {
+      left: 50%;
+      bottom: calc(100% + 10px);
+    }
+
+    &Activity {
+      left: 50%;
+      bottom: calc(100% + 10px);
+    }
+
+    li {
+      align-items: center;
+      color: #48555e;
+      display: flex;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+      padding: 10px 13px;
+
+      &:hover {
+        background: #f2f4f7;
+      }
+
+      &:first-child {
+        border-radius: 4px 4px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 4px 4px;
+      }
+    }
+  }
+}

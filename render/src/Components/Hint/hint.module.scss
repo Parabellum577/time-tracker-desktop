@@ -1,0 +1,48 @@
+.hintBlock {
+  position: relative;
+}
+
+.hintPopupWrap {
+  position: absolute;
+  z-index: 2;
+  width: 350px;
+  top: calc(100% + 5px);
+  display: flex;
+
+  &Left {
+    left: 0;
+    justify-content: flex-start;
+  }
+
+  &Right {
+    right: 0;
+    justify-content: flex-end;
+  }
+
+  &Center {
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: flex-start;
+  }
+}
+
+.hintPopup {
+  color: #333;
+  padding: 7px;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #fff;
+  line-height: 1.2;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+
+  span {
+    display: block;
+  }
+}
+
+.hintArea {
+  * {
+    cursor: pointer;
+  }
+}

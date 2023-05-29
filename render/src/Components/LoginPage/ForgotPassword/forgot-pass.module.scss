@@ -1,0 +1,226 @@
+.forgotPage {
+  align-items: center;
+  background: #282f36;
+  display: flex;
+  flex-direction: column;
+  font-family: 'SFUIDisplay';
+  width: 100%;
+
+  .loginHeader {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16vh;
+
+    .loginLogoBlock {
+      align-items: center;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      position: relative;
+
+      img {
+        cursor: pointer;
+        height: 48px;
+        width: auto;
+      }
+
+      p {
+        cursor: pointer;
+        font-size: 39px;
+        font-weight: 700;
+        margin-left: 10px;
+      }
+    }
+
+    .signInHint {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 600;
+    }
+  }
+
+  .content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .loginBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 320px;
+
+    .infoBlock {
+      .imgBlock {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+
+        .envelopeIcon {
+          color: #fff;
+          font-size: 36px;
+        }
+
+        .titles {
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          font-size: 12px;
+          margin-left: 2px;
+
+          .password {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .loginInputBlock {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 32px 0 0;
+        position: relative;
+        width: 100%;
+
+        .loginInputLabel {
+          color: #7f8fa4;
+          font-size: 12px;
+          margin: 0;
+          padding: 0 2px 7px;
+          position: relative;
+          white-space: nowrap;
+        }
+
+        .loginInputField {
+          background-color: #fff;
+          border-radius: 4px;
+          font-size: 12px;
+          padding: 7px 9px;
+          width: 100%;
+          border: 2px solid transparent;
+          font-size: 14px;
+          cursor: pointer;
+
+          &:hover {
+            border: 2px solid #1991eb;
+          }
+        }
+
+        .inputWithError {
+          background-color: #ffecee;
+          border: 2px solid #ed1d41;
+        }
+
+        .errorIcon {
+          left: 93%;
+          position: absolute;
+          top: 12%;
+
+          .icon {
+            color: #ed1d41;
+            font-size: 16px;
+          }
+        }
+
+        .errorMessage {
+          background: #ed1d41;
+          border-radius: 0 0 4px 4px;
+          color: #fff;
+          font-size: 12px;
+          height: 21px;
+          padding: 12px 0 0 5px;
+          position: absolute;
+          top: 48px;
+          width: calc(100% - 5px);
+          z-index: 2;
+        }
+
+        button {
+          background: #1991eb;
+          border-radius: 4px;
+          border: 1px solid transparent;
+          color: #fff;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 700;
+          height: 48px;
+          position: relative;
+          width: 100%;
+
+          &:hover {
+            background: #51abf0;
+          }
+        }
+
+        .recommendation {
+          color: #a9b4bd;
+          font-size: 12px;
+          letter-spacing: 0.03em;
+          line-height: 16px;
+          margin: 11px 12px 92px;
+          text-align: left;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .buttonsRow {
+    display: flex;
+    justify-content: space-between;
+    left: 3%;
+    position: absolute;
+    top: 5%;
+
+    .returnLink {
+      text-decoration: blink;
+
+      .returnBlock {
+        align-items: center;
+        display: flex;
+
+        &:hover {
+          > .chevron .chevronIcon,
+          > span {
+            color: #878a8d;
+          }
+        }
+
+        .chevron {
+          border-radius: 4px;
+          border-radius: 8px;
+          border: 0;
+          cursor: pointer;
+          font-size: 12px;
+          font-weight: 500;
+          height: 32;
+          position: relative;
+
+          .chevronIcon {
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+
+        span {
+          color: #fff;
+          cursor: pointer;
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .version {
+    margin-top: 50%;
+    color: #a9b4bd;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    line-height: 16px;
+  }
+}

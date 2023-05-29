@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  <style>
+    html {
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    section {
+      align-items: center;
+      display: flex;
+      height: -webkit-fill-available;
+      position: absolute;
+      top: 0;
+      width: -webkit-fill-available;
+    }
+
+    div {
+      align-items: center;
+      display: flex;
+      height: -webkit-fill-available;
+      justify-content: center;
+      width: 50%;
+    }
+
+    div:hover {
+      background-color: #1bb93440;
+    }
+
+    div:last-child:hover {
+      background-color: #d82e3740;
+    }
+
+    svg {
+      background-color: #dddddd;
+      border-radius: 50%;
+      border: 1px solid #dadada;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.55);
+      padding: 3px;
+    }
+
+    #accept {
+      fill: #1bb934;
+    }
+
+    #decline {
+      fill: #d82e37;
+    }
+  </style>
+  <body>
+    <script>
+      let screenObject = null
+      const SCREENSHOT_QUALITY = 50
+      const { desktopCapturer, ipcRenderer } = require('electron')
+      const { screen } = require('electron').remote
+      const fs = require('fs')
+      const os = require('os')
+      const currentScreen = screen.getDisplayNearestPoint(screen.getCursorScreenPoint())
+      console.log('currentScreen', currentScreen)
+      desktopCapturer.getSources(
+        {
+          types: ['screen'],
+          thumbnailSize: {
+            width: currentScreen.workAreaSize.width,
+            height: currentScreen.workAreaSize.height,
+          },
+        },
+        function(error, sources) {
+          if (error) {
+            console.error(error)
+            return
+          }
+
+          const screenSource =
+            sources.length && (sources.find(scr => +scr.display_id === currentScreen.id) || sources[0])
+
+          if (!screenSource || !screenSource.thumbnail) {
+            console.error('Thumbnail is not defined')
+            ipcRenderer.send('screen-window-action', {
+              type: 'DECLINE_SCREENSHOT',
+            })
+            return
+          }
+
+          const originThumbnail = screenSource.thumbnail
+          const thumbnail = Buffer.from(originThumbnail.toDataURL().slice(22), 'base64')
+          screenObject = originThumbnail.toDataURL()
+          const img = document.createElement('img')
+          img.setAttribute('src', screenObject)
+          const doneIcon = document.createElement('div')
+          doneIcon.innerHTML =
+            '<svg id="accept" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>'
+          const removeIcon = document.createElement('div')
+          removeIcon.innerHTML =
+            '<svg id="decline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'
+          const actionsBlock = document.createElement('section')
+          actionsBlock.appendChild(doneIcon)
+          actionsBlock.appendChild(removeIcon)
+          document.body.appendChild(img)
+          document.body.appendChild(actionsBlock)
+          const currentTime = Math.floor(new Date().getTime() / 1000)
+          const tmpFilePath = `${os.tmpdir()}/${currentTime}.png`
+          fs.writeFileSync(tmpFilePath, thumbnail, e => {
+            console.log(e ? e : 'done')
+          })
+
+          doneIcon.onclick = () => {
+            saveScreen()
+          }
+
+          removeIcon.onclick = () => {
+            declineScreen()
+          }
+
+          const saveScreen = () => {
+            ipcRenderer.send('screen-window-action', {
+              type: 'SAVE_SCREENSHOT',
+              payload: {
+                path: tmpFilePath,
+                currentTime,
+              },
+            })
+          }
+
+          const declineScreen = () => {
+            fs.unlink(tmpFilePath, () => {
+              console.log('remove screen file')
+              ipcRenderer.send('screen-window-action', {
+                type: 'DECLINE_SCREENSHOT',
+              })
+            })
+          }
+
+          // SEND ACTION TO MAIN WITH PATH
+
+          const screenWindow = require('electron').remote.getCurrentWindow()
+          setTimeout(() => {
+            saveScreen()
+          }, 5000)
+        },
+      )
+    </script>
+  </body>
+</html>

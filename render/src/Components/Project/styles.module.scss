@@ -1,0 +1,176 @@
+.coldStartProjectItem {
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  height: 54px;
+  justify-content: space-between;
+  padding: 10px 24px;
+  position: relative;
+
+  &:hover {
+    background: #f2f4f7;
+  }
+
+  * {
+    cursor: pointer;
+  }
+
+  .projectContent {
+    align-items: center;
+    display: flex;
+    max-width: 95%;
+
+    .projectTitleBlock {
+      margin-left: 12px;
+      max-width: 300px;
+
+      > p {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .projectName {
+        color: #333;
+        font-size: 16px;
+        font-weight: 500;
+
+        .higlighted {
+          background-color: #48adfa5c;
+        }
+      }
+
+      .projectDescription {
+        color: #7f8fa4;
+        font-size: 14px;
+        margin-top: 4px;
+      }
+    }
+
+    .projectIcon {
+      height: 32px;
+      margin-left: 6px;
+      width: 32px;
+    }
+  }
+
+  .checkIcon {
+    height: 32px;
+    margin-left: 6px;
+    width: 32px;
+  }
+}
+
+.searchBarProjectItem {
+  align-items: center;
+  border-bottom: 1px solid #2d353b;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  height: 68px;
+  justify-content: space-between;
+  padding: 15px;
+  position: relative;
+
+  &:hover {
+    background-color: #3c4854;
+
+    .settingsIconContainer {
+      align-items: center;
+      display: flex;
+      height: -webkit-fill-available;
+    }
+
+    .settingsIcon {
+      display: -webkit-inline-flex;
+    }
+  }
+
+  & * {
+    cursor: pointer;
+  }
+
+  .trackerLogo {
+    margin-right: 12px;
+  }
+
+  .projectContent {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: flex-start;
+    white-space: nowrap;
+    width: calc(100% - 65px);
+
+    .projectTitleBlock {
+      margin: 0 8px;
+      width: -webkit-fill-available;
+    }
+
+    .projectName {
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      line-height: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: -webkit-fill-available;
+    }
+
+    .higlighted {
+      background-color: #48adfa5c;
+    }
+
+    .projectDescription {
+      color: $additional-color;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: -webkit-fill-available;
+    }
+  }
+
+  .settingsIcon {
+    color: #9b9b9b;
+    display: none;
+    height: 24px;
+    width: 24px;
+  }
+
+  .trackerName {
+    font-size: 7px;
+    margin-right: 5px;
+    text-transform: capitalize;
+  }
+}
+
+.coldProjectsItemError {
+  cursor: not-allowed;
+  opacity: 0.5;
+
+  * {
+    cursor: not-allowed;
+  }
+}
+
+li[role='menuitem'] {
+  &.menuItem {
+    box-sizing: border-box;
+    height: 36px;
+    width: 160px;
+
+    p {
+      color: #48555e;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}

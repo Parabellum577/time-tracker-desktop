@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DevTools</title>
+    <link rel="stylesheet" href="./highlight.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="network-panel">
+      <table border="1">
+        <tr>
+          <th width="50">Status</th>
+          <th>Endpoint</th>
+          <th width="60">Time</th>
+        </tr>
+      </table>
+    </div>
+    <div class="preview-request-container">
+      <div>
+        <h2>Request</h2>
+        <p>Method: <span id="request-method"></span></p>
+        <p>Payload:</p>
+        <pre>
+          <code class="json" id="request-payload"></code>
+        </pre>
+      </div>
+      <div>
+        <h2>Response</h2>
+        <div id="response-content"></div>
+      </div>
+    </div>
+
+    <script src="./highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad()
+    </script>
+    <script src="./devtools-renderer.js"></script>
+  </body>
+</html>

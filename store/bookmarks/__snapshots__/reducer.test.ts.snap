@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Store] Bookmarks Reducer [Failure] Should handle getBookmarks 1`] = `
+Object {
+  "extendedBookmarks": Array [],
+}
+`;
+
+exports[`[Store] Bookmarks Reducer [Success] [Snapshot] Should handle getBookmarks 1`] = `
+Object {
+  "extendedBookmarks": Array [
+    Object {
+      "Activity": 0,
+      "Done": 0,
+      "DueDate": 0,
+      "Estimate": 0,
+      "ID": "string",
+      "IsAssigned": true,
+      "Priority": Object {
+        "ID": 0,
+        "Name": "string",
+      },
+      "ProjectID": "string",
+      "Spent": 0,
+      "Status": Object {
+        "ID": 0,
+        "Name": "string",
+      },
+      "Title": "string",
+      "TrackerID": 0,
+      "Type": Object {
+        "ID": 0,
+        "Name": "string",
+      },
+      "URL": "string",
+    },
+    Object {
+      "Activity": 0,
+      "Done": 0,
+      "DueDate": 0,
+      "Estimate": 0,
+      "ID": "string",
+      "IsAssigned": true,
+      "Priority": Object {
+        "ID": 0,
+        "Name": "string",
+      },
+      "ProjectID": "string",
+      "Spent": 0,
+      "Status": Object {
+        "ID": 0,
+        "Name": "string",
+      },
+      "Title": "string",
+      "TrackerID": 0,
+      "Type": Object {
+        "ID": 0,
+        "Name": "string",
+      },
+      "URL": "string",
+    },
+  ],
+}
+`;

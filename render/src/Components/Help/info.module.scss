@@ -1,0 +1,122 @@
+.main {
+  color: $mainTextLight;
+  padding: 0 32px;
+  text-align: center;
+  color: #a0abba;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+
+  .contentBlock {
+    padding: 52px 0;
+    &:not(:last-child) {
+      border-bottom: 1px solid #2d353b;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    margin: 0 0 15px;
+  }
+
+  span {
+    font-size: 15px;
+    display: block;
+    line-height: 1;
+    color: #a0abba;
+    margin: 0 0 32px;
+  }
+
+  button {
+    max-width: 200px;
+    width: 100%;
+    display: block;
+    background: #1991eb;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px 0px #00112c;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    height: 36px;
+    border: 1px solid transparent;
+    margin: 0 auto 32px;
+    cursor: pointer;
+
+    &:hover {
+      background: #68b8f5;
+    }
+  }
+
+  .updateButton {
+    background: #8a9399;
+    color: #a9b4bd;
+    cursor: default;
+
+    &:hover {
+      background: #8a9399;
+      color: #a9b4bd;
+    }
+  }
+
+  .updateAvailableBtn {
+    background: #4cc035;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      background: #8ed380;
+      color: #fff;
+    }
+  }
+
+  a {
+    color: #1991eb;
+    line-height: 1;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: #1991eb;
+    }
+  }
+
+  .linksBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: pre;
+
+    span {
+      margin: 0;
+      padding: 0 4px;
+    }
+  }
+
+  .questionTitle {
+    margin: 0 0 32px;
+
+    span {
+      display: inline-block;
+      font-size: 20px;
+      color: #fff;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  .intercomIcon {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0px 1px 2px 0px #00112c;
+    border-radius: 50%;
+
+    * {
+      cursor: pointer;
+    }
+  }
+}

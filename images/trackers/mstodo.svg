@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#F2F3F8" offset="0%"></stop>
+            <stop stop-color="#FEFEFE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-2.48949813e-15%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#0099FF" offset="0%"></stop>
+            <stop stop-color="#4C76F9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0002.-Settings--Integrations-#02" transform="translate(-243.000000, -930.000000)">
+            <g id="Header/32" transform="translate(0.000000, 148.000000)">
+                <g id="Group">
+                    <g id="Group-2">
+                        <g id="Group-3">
+                            <g id="Group-4" transform="translate(0.000000, 1.000000)">
+                                <g id="Cell/add-integration" transform="translate(220.000000, 768.000000)">
+                                    <g id="Logo/tracker/color/mstodo" transform="translate(24.000000, 14.000000)">
+                                        <path d="M4.5,0 L31.5,0 C33.9852814,-4.56538782e-16 36,2.01471863 36,4.5 L36,31.5 C36,33.9852814 33.9852814,36 31.5,36 L4.5,36 C2.01471863,36 3.04359188e-16,33.9852814 0,31.5 L0,4.5 C-3.04359188e-16,2.01471863 2.01471863,4.56538782e-16 4.5,0 Z" id="Rectangle" stroke="#E3E4E6" stroke-width="0.6" fill="url(#linearGradient-1)"></path>
+                                        <g id="Microsoft_To-Do_2017_App_Button" transform="translate(6.750000, 9.000000)" fill-rule="nonzero">
+                                            <g id="g3000" transform="translate(0.306440, 0.449416)">
+                                                <g id="g3014">
+                                                    <g id="Group">
+                                                        <polygon id="path3004" fill="#8EBAFF" points="4.37272039 4.51443915 -3.07398551e-12 8.97786766 4.39035233 13.3788082 8.76307273 8.99572138"></polygon>
+                                                        <polygon id="path2996" fill="url(#linearGradient-2)" points="8.85627007 17.8537145 4.39142196 13.3789967 17.722616 3.64153152e-14 22.1557886 4.38691264"></polygon>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

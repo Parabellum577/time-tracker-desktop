@@ -1,0 +1,10 @@
+{
+  "name": "tg-url-det",
+  "version": "0.0.0",
+  "description": "urldetection plugin for TimeGuard",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.qarea.org/timeguard/timeguard3-urldetection.git"
+  }
+}

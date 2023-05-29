@@ -1,0 +1,340 @@
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  .trackedTime {
+    align-items: center;
+    display: flex;
+    height: 32px;
+    justify-content: space-between;
+    padding: 0 11px;
+    position: relative;
+    width: -webkit-fill-available;
+
+    &Title {
+      align-items: center;
+      color: $additional-color;
+      cursor: pointer;
+      display: flex;
+      font-size: 13px;
+      font-weight: 400;
+      height: 12px;
+
+      > div:first-child {
+        height: 24px;
+        margin-right: 5px;
+        pointer-events: none;
+        width: 24px;
+      }
+
+      &:hover {
+        margin-bottom: -12px;
+        padding-bottom: 12px;
+        span {
+          color: #ededed;
+        }
+
+        use {
+          fill: #ededed;
+        }
+      }
+
+      .timer {
+        color: #fff;
+      }
+
+      * {
+        cursor: pointer;
+      }
+
+      .todayIcon {
+        margin-right: 5px;
+      }
+
+      span {
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .time {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+
+      span {
+        cursor: pointer;
+
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+
+      &:hover {
+        color: #ededed;
+      }
+    }
+  }
+
+  .rightContainer {
+    display: flex;
+  }
+
+  .dashboard {
+    align-items: center;
+    color: $additional-color;
+    cursor: pointer;
+    display: flex;
+
+    &:hover {
+      span {
+        color: #ededed;
+      }
+
+      use {
+        fill: #ededed;
+      }
+    }
+
+    * {
+      cursor: pointer;
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    span {
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .popover {
+    background: #fff;
+    border-radius: 10px;
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 33px;
+    transform: translateX(-50%);
+    width: 86%;
+    z-index: 4;
+
+    .arrowIcon {
+      background: #fff;
+      border-radius: 3px;
+      border-top-left-radius: 60%;
+      left: -8px;
+      overflow: hidden;
+      padding-bottom: 10%;
+      position: absolute;
+      top: 0px;
+      transform-origin: 63% 0;
+      transform: rotate(-45deg);
+      width: 22px;
+      z-index: -1;
+
+      &:before {
+        background: #fff;
+        content: '';
+        position: absolute;
+        right: 5px;
+        top: 0;
+        transform-origin: inherit;
+        transform: rotate(45deg);
+      }
+    }
+
+    .tip {
+      height: 10px;
+      position: absolute;
+      right: 23px;
+      top: -10px;
+      width: 32px;
+    }
+
+    .popoverTitle {
+      border-bottom: 1px solid #d2d9e0;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 28px;
+      padding-bottom: 10px;
+      text-align: left;
+    }
+
+    .popoverDataWrap {
+      display: flex;
+      flex-wrap: wrap;
+
+      .popoverDataBlock {
+        background: #fff;
+        border-bottom: 1px solid #d2d9e0;
+        cursor: pointer;
+        height: 85px;
+        padding-top: 35px;
+        width: calc(50% - 1px);
+
+        &:nth-child(2n - 1) {
+          border-right: 1px solid #d2d9e0;
+        }
+
+        &:nth-last-of-type(-n + 2) {
+          border-bottom: none;
+        }
+      }
+
+      .label {
+        color: #7f8fa4;
+        cursor: pointer;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      .dataValue {
+        color: #31363d;
+        cursor: pointer;
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: -0.01em;
+        line-height: 36px;
+        padding-top: 10px;
+        text-align: center;
+      }
+    }
+  }
+
+  .timeline {
+    align-items: center;
+    display: flex;
+    height: 52px;
+    justify-content: center;
+    overflow: hidden;
+    width: -webkit-fill-available;
+  }
+
+  .divider {
+    background: $divider-color;
+    height: 1px;
+    margin: 0 12px;
+    width: -webkit-fill-available;
+  }
+
+  .actionBar {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 64px;
+    width: 100%;
+
+    &:hover {
+      background: #404955;
+
+      .menu .activeDivider {
+        opacity: 0.4;
+      }
+    }
+
+    .headerContainer {
+      display: flex;
+      height: -webkit-fill-available;
+      justify-content: space-between;
+
+      .menu {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 16px;
+        width: 104px;
+
+        .indicatorWrap {
+          position: relative;
+
+          .tutorialIndicator {
+            left: -9px;
+            top: -9px;
+          }
+        }
+
+        .divider {
+          background: $divider-color;
+          height: 28px;
+          margin: 0;
+          width: 1px;
+        }
+
+        .passiveDivider {
+          opacity: 1;
+        }
+
+        .activeDivider {
+          opacity: 0.2;
+        }
+
+        .searchIcon {
+          font-size: 30px;
+
+          g {
+            fill: $additional-color;
+          }
+
+          &:hover {
+            g {
+              fill: #fff;
+            }
+          }
+        }
+
+        .highlightedIcon {
+          g {
+            fill: #13566d;
+          }
+
+          &:hover {
+            opacity: #fff;
+          }
+        }
+
+        * {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .progressBar {
+      height: 3px;
+      width: -webkit-fill-available;
+    }
+
+    .activeBar {
+      @include activeTrackingAnimation;
+      background: #58c4f5;
+    }
+
+    .passiveBar {
+      background: transparent;
+    }
+  }
+
+  .frontBar {
+    position: absolute;
+    top: 13.5vh;
+  }
+
+  .highlightedBar {
+    background: #306a86;
+
+    &:hover {
+      background: #31789c;
+    }
+  }
+}
+
+@include activeTrackingKeyframes;

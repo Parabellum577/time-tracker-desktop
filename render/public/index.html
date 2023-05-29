@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json"> -->
+    <!-- <link rel="shortcut icon" href="../../images/app-icon.ico"> -->
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>timetracker</title>
+    <!-- <script async src="popup.js"></script> -->
+    <!-- <link rel="stylesheet" href="croppie.css" /> -->
+    <style>
+      .platform-windows .title-bar {
+        display: flex !important;
+        border-radius: 0.4rem 0.4rem 0 0;
+        align-items: center;
+      }
+
+      .platform-windows .title-bar__buttons {
+        display: inline-flex !important;
+      }
+
+      .platform-darwin .title-bar {
+        display: block !important;
+        /* temporary only for darwin custom titlebar */
+        height: 34px;
+      }
+
+      .platform-darwin .title-bar__buttons {
+        display: none;
+      }
+
+      .platform-darwin .title-bar__caption {
+        padding-left: 60px;
+        font-size: 14px;
+        line-height: 38px;
+        height: 100%;
+        color: #bbc5d5;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .platform-linux .title-bar {
+        display: flex;
+        align-items: center;
+        background-color: #262f37;
+        height: 22px;
+      }
+
+      .platform-linux .title-bar__buttons {
+        width: 38px;
+        margin-right: 5px;
+        color: #919da9;
+      }
+
+      .platform-linux .title-bar__buttons #max-btn {
+        display: none;
+      }
+
+      .platform-linux .title-bar__caption {
+        font-size: 15px;
+        font-weight: 600;
+        color: #d1d9e0;
+      }
+
+      .platform-linux .title-bar__button {
+        height: 16px;
+        width: 17px;
+        background-size: 17px;
+        background-position: 0px -3px;
+        border-radius: 50%;
+        background-color: #000;
+      }
+
+      .platform-linux .title-bar__button:hover::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #313131;
+        border-radius: 50%;
+        content: ' ';
+      }
+
+      .title-bar {
+        background-color: #282f36;
+        height: 22px;
+        position: relative;
+        -webkit-app-region: drag;
+      }
+
+      .title-bar__caption {
+        font-size: 12px;
+        height: 14px;
+        line-height: 14px;
+        color: #697887;
+        font-weight: 500;
+        margin: 0 auto;
+      }
+
+      .title-bar__buttons {
+        -webkit-app-region: no-drag;
+        width: 67px;
+        height: 22px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        right: 1px;
+      }
+
+      .title-bar__button {
+        height: 20px;
+        width: 22px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        position: relative;
+        margin-top: 2px;
+      }
+
+      .title-bar__button[disabled] {
+        opacity: 0.25;
+      }
+
+      .title-bar__button:not([disabled]):hover::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+        content: ' ';
+      }
+
+      #min-btn {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAA+AQMAAABqVGvSAAAABlBMVEUoLzb////Y9wcuAAAAEklEQVQY02MYooD//38YNcIAAO7uBBsSKZKwAAAAAElFTkSuQmCC');
+      }
+
+      #max-btn {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAA+AQMAAABqVGvSAAAABlBMVEUoLzb////Y9wcuAAAAGUlEQVQY02MYKMD//z8SxcPATDcKzfahBgDDAAklxrVxigAAAABJRU5ErkJggg==');
+      }
+
+      #close-btn {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAA+AQMAAABqVGvSAAAABlBMVEUoLzbf399OUEWkAAAASklEQVQY02MYKMDEwAii2BmYGxgYgAQ7iMd4gA8s+UAGTBVYgCmLAjAl8wBM8R8AU+wNUAoqCFUC1QDVDjUMZjTEIpi1UEcMNQAAebINCXKhuzEAAAAASUVORK5CYII=');
+      }
+
+      :root {
+        --current-app-height: 800px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div class="title-bar">
+      <div class="title-bar__caption">timetracker</div>
+      <div class="title-bar__buttons">
+        <div class="title-bar__button" id="min-btn"></div>
+        <div class="title-bar__button" id="max-btn" disabled></div>
+        <div class="title-bar__button" id="close-btn"></div>
+      </div>
+    </div>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script>
+      ;(function() {
+        // Retrieve remote BrowserWindow
+        const os = require('os')
+        const currentWindow = require('electron').remote.getCurrentWindow()
+
+        var osSuffix = ''
+        switch (os.type()) {
+          case 'Windows_NT':
+            osSuffix = 'windows'
+            break
+          case 'Darwin':
+            osSuffix = 'darwin'
+            break
+          case 'Linux':
+            osSuffix = 'linux'
+            break
+          default:
+            osSuffix = ''
+        }
+        document.body.classList.add('platform-' + osSuffix)
+        const windowHeight = currentWindow.getSize()[1]
+        document.documentElement.style.setProperty('--current-app-height', windowHeight + 'px')
+        // Minimize window
+        document.getElementById('min-btn').addEventListener('click', e => {
+          currentWindow.minimize()
+        })
+        const { ipcRenderer } = require('electron')
+        // Close window
+        document.getElementById('close-btn').addEventListener('click', e => {
+          ipcRenderer.sendSync('mainWindow-closed')
+          currentWindow.close()
+        })
+        document.addEventListener('load', () => ipcRenderer.send('mainWindow-opened'))
+        document.addEventListener(
+          'dragover',
+          function(event) {
+            event.preventDefault()
+            return false
+          },
+          false,
+        )
+
+        document.addEventListener(
+          'drop',
+          function(event) {
+            event.preventDefault()
+            return false
+          },
+          false,
+        )
+        const { Menu, MenuItem } = require('electron').remote
+
+        const template = [
+          {
+            label: 'Undo',
+            accelerator: 'CmdOrCtrl+Z',
+            role: 'undo',
+          },
+          {
+            label: 'Redo',
+            accelerator: 'Shift+CmdOrCtrl+Z',
+            role: 'redo',
+          },
+          {
+            type: 'separator',
+          },
+          {
+            label: 'Cut',
+            accelerator: 'CmdOrCtrl+X',
+            role: 'cut',
+          },
+          {
+            label: 'Copy',
+            accelerator: 'CmdOrCtrl+C',
+            role: 'copy',
+          },
+          {
+            label: 'Paste',
+            accelerator: 'CmdOrCtrl+V',
+            role: 'paste',
+          },
+          {
+            label: 'Select All',
+            accelerator: 'CmdOrCtrl+A',
+            role: 'selectAll',
+          },
+        ]
+
+        const menu = new Menu()
+        template.forEach(menuItem => {
+          menu.append(new MenuItem(menuItem))
+        })
+        document.body.addEventListener('contextmenu', e => {
+          e.preventDefault()
+
+          let node = e.target
+
+          while (node) {
+            if (node.nodeName.match(/^(input|textarea)$/i) || node.isContentEditable) {
+              menu.popup(currentWindow)
+              break
+            }
+            node = node.parentNode
+          }
+        })
+      })()
+    </script>
+  </body>
+</html>

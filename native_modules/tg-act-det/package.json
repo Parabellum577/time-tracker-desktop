@@ -1,0 +1,11 @@
+{
+  "name": "tg-act-det",
+  "version": "0.0.0",
+  "description": "activitydetection detection plugin for TimeGuard",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.qarea.org/timeguard/timeguard3-activitydetection.git"
+  }
+}

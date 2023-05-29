@@ -1,0 +1,7 @@
+div.selectPlanningsPage {
+  &__option {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

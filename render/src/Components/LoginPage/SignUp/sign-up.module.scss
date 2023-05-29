@@ -1,0 +1,76 @@
+.loginMainBlock {
+  align-items: center;
+  background: #282f36;
+  display: flex;
+  flex-direction: column;
+  font-family: 'SFUIDisplay';
+  width: 100%;
+
+  .loginHeader {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 6vh;
+
+    .loginLogoBlock {
+      align-items: center;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2vh;
+      position: relative;
+    }
+
+    .signUpHint {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  .content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .newAccount {
+    color: #1991eb;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+    margin: 3vh;
+    text-decoration: blink;
+
+    p {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .version {
+    color: #a9b4bd;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    line-height: 16px;
+  }
+
+  .errorMessage {
+    background: #ed1d41;
+    border-radius: 0 0 4px 4px;
+    color: #fff;
+    font-size: 12px;
+    height: 21px;
+    padding: 12px 0 0 5px;
+    position: absolute;
+    top: 55px;
+    width: calc(100% - 5px);
+    z-index: 2;
+  }
+}

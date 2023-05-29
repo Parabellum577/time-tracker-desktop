@@ -1,0 +1,16 @@
+.trackersSearch {
+  text-align: center;
+  padding: 8px 0;
+  height: 48px;
+
+  input {
+    border-radius: 3px;
+    border: 0;
+    color: $additional-color;
+    font-size: 17px;
+    font-weight: 500;
+    height: 100%;
+    padding: 0 18px;
+    width: 89%;
+  }
+}

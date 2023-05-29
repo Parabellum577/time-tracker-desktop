@@ -1,0 +1,44 @@
+.container {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: $title-bar-height;
+  z-index: 101;
+  background-color: #22282eb3;
+
+  .content,
+  .transparent {
+    background-color: #fafdff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    height: 99%;
+    margin: 0 8px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    transform: translateY(100vh);
+    width: calc(100% - 16px);
+  }
+
+  .transparent {
+    background: transparent;
+    height: auto;
+    padding: 0;
+    width: -webkit-fill-available;
+    margin: 0 10px;
+    position: absolute;
+    top: 32%;
+  }
+
+  .manualModal {
+    height: calc(98% - 83px);
+    top: 83px;
+  }
+}
+
+.manualContainer {
+  background-color: transparent;
+}

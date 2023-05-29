@@ -1,0 +1,37 @@
+.error {
+  background: #ff143c;
+}
+
+.warning {
+  background: #f99f35;
+}
+
+.success {
+  background: #76c545;
+}
+
+.coldstart {
+  background: #42b8f4;
+}
+
+.notificationMessage {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+  font-weight: 500;
+  height: 33px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 96%;
+  width: 100%;
+  transition: 0.3s;
+  z-index: 105;
+
+  & > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+  }
+}

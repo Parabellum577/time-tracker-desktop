@@ -1,0 +1,256 @@
+.descriptionBlock {
+  display: flex;
+  justify-content: space-between;
+  margin: 26px 16px 18px;
+  width: -webkit-fill-available;
+
+  .timeInfo {
+    display: flex;
+    flex-direction: column;
+
+    .timeTitle {
+      align-items: center;
+      color: #3c8deb;
+      display: flex;
+      height: 20px;
+
+      > i {
+        font-size: 20px;
+      }
+
+      > span {
+        font-size: 14px;
+        font-weight: 600;
+        margin-left: 5px;
+      }
+
+      .infoIcon {
+        width: 20px;
+        height: 20px;
+
+        path {
+          fill: #3c8deb;
+        }
+      }
+    }
+
+    .timeInput {
+      background: #fff;
+      border-radius: 4px;
+      border: 1px solid #c5cad5;
+      margin-top: 12px;
+      width: 166px;
+
+      > .arrowBlock {
+        align-items: center;
+        display: flex;
+        height: -webkit-fill-available;
+        width: 19%;
+      }
+
+      > div {
+        border: none;
+        width: -webkit-fill-available;
+      }
+
+      > span {
+        color: #000;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+    .readOnlyBlock {
+      background: #e8ecf3;
+    }
+
+    .errorContainer {
+      align-items: center;
+      display: flex;
+      height: 40px;
+      justify-content: flex-start;
+      margin-top: 10px;
+      width: -webkit-fill-available;
+
+      .errorMessage {
+        color: #dd2c00;
+        font-size: 12px;
+        letter-spacing: 0.02em;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+.switchBlock {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 88px 10px;
+
+  .switchText {
+    color: #858e9b;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  .customSwitchBase {
+    background: #858c9a;
+    border-radius: 16px;
+    cursor: pointer;
+    height: 28px;
+    width: 48px;
+
+    * {
+      cursor: pointer;
+    }
+
+    > span {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .customChecked {
+      color: #cbced1;
+
+      .customBar {
+        background: transparent;
+      }
+    }
+  }
+
+  > .customRoot {
+    cursor: pointer;
+    width: 24px;
+
+    > .customBar {
+      margin-left: -12px;
+      width: 24px;
+    }
+
+    > .customBarChecked {
+      background-color: #76c545 !important;
+    }
+
+    > .customChecked {
+      color: #1bb934;
+      height: 100%;
+      transform: translateX(13px);
+      width: 12px;
+
+      + .customBar {
+        background: transparent;
+      }
+    }
+
+    & .checkedBar {
+      background-color: #76c545;
+      opacity: 1;
+      transform: inherit;
+    }
+  }
+
+  > .customRoot :first-child {
+    height: 14px;
+    width: 24px;
+
+    > span {
+      > .customIcon {
+        background-color: #fff;
+        box-shadow: none;
+        cursor: pointer;
+        height: 8px;
+        margin-left: 2px;
+        transition: 0.3s;
+        width: 8px;
+
+        + input {
+          height: 12px;
+          position: absolute;
+          top: initial;
+          width: 22px;
+        }
+      }
+
+      .customIconChecked {
+        box-shadow: none;
+        margin-left: 14px;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.confirmContainer {
+  bottom: 16px;
+  position: absolute;
+  width: 100%;
+
+  .divider {
+    background: #e9edf4;
+    height: 2px;
+    margin: 0 16px 12px;
+  }
+
+  .reportBtn {
+    background: #3c8deb;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #fafafa;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    height: 52px;
+    letter-spacing: 0.3px;
+    margin: 0 16px;
+    position: relative;
+    width: -webkit-fill-available;
+
+    &:hover {
+      background: #51abf0;
+    }
+  }
+}
+
+.projectStatusContainer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 16px;
+  padding: 13px 0 0;
+
+  .statusMenu {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26), 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
+    padding: 0;
+    position: absolute;
+    right: -130%;
+    top: 0;
+    width: 184px;
+    z-index: 5;
+
+    li {
+      align-items: center;
+      color: #48555e;
+      display: flex;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1;
+      padding: 14px 13px;
+
+      &:hover {
+        background: #f2f4f7;
+      }
+
+      &:first-child {
+        border-radius: 4px 4px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 4px 4px;
+      }
+    }
+  }
+}

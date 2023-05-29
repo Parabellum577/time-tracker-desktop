@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Store] Screenshot Reducer [Failure] Should handle getScreenshotStorage 1`] = `
+Object {
+  "availableStorage": null,
+  "status": true,
+}
+`;
+
+exports[`[Store] Screenshot Reducer [Success] [Snapshot] Should handle addScreenshotStorage 1`] = `
+Object {
+  "availableStorage": Object {
+    "Email": "user@gmail.com",
+    "FolderName": "New Folder",
+    "Image": "",
+    "Name": "bla-bla-bla",
+    "StorageType": "DROPBOX",
+  },
+  "availableStorages": Object {
+    "Email": "user@gmail.com",
+    "FolderName": "New Folder",
+    "Image": "",
+    "Name": "bla-bla-bla",
+    "StorageType": "DROPBOX",
+  },
+  "status": true,
+}
+`;
+
+exports[`[Store] Screenshot Reducer [Success] [Snapshot] Should handle deleteScreenshotStorages 1`] = `
+Object {
+  "availableStorage": null,
+  "status": false,
+}
+`;
+
+exports[`[Store] Screenshot Reducer [Success] [Snapshot] Should handle getScreenshotStorage 1`] = `
+Object {
+  "availableStorage": Object {
+    "Email": "user@gmail.com",
+    "FolderName": "New Folder",
+    "Image": "",
+    "Name": "bla-bla-bla",
+    "StorageType": "DROPBOX",
+  },
+  "status": true,
+}
+`;

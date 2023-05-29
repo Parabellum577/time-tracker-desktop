@@ -1,0 +1,19 @@
+.codeBlock {
+  &:not(:last-child) {
+    margin: 0 0 25px;
+  }
+
+  .controlBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .btnBlock {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

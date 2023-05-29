@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Store] Auth Reducer [Failure] Should handle showAlertMessage 1`] = `
+Object {
+  "authorized": false,
+  "error": Object {
+    "code": 666,
+    "message": "SOME_ERROR",
+  },
+  "isLoadingData": false,
+  "loading": false,
+}
+`;
+
+exports[`[Store] Auth Reducer [Success] [Snapshot] Should handle loginUser 1`] = `
+Object {
+  "authorized": true,
+  "error": null,
+  "isLoadingData": false,
+  "loading": false,
+}
+`;
+
+exports[`[Store] Auth Reducer [Success] [Snapshot] Should handle signOut 1`] = `
+Object {
+  "authorized": false,
+  "error": null,
+  "isLoadingData": false,
+  "loading": false,
+}
+`;

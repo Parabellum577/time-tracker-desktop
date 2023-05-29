@@ -1,0 +1,81 @@
+.header {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  justify-content: space-between;
+  min-height: 64px;
+  padding: 0 0 0 24px;
+  border-bottom: 1px solid $divider-color;
+
+  * {
+    cursor: pointer;
+  }
+
+  .titleBlock {
+    align-items: center;
+    display: flex;
+
+    .trackerIcon {
+      height: 36px;
+      margin-right: 16px;
+      width: 36px;
+    }
+  }
+
+  .link {
+    text-decoration: none;
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .arrowIcon {
+    color: #fff;
+    font-size: 32px;
+    margin-left: -10px;
+    margin-right: 8px;
+  }
+
+  .iconContainer {
+    align-items: center;
+    background-color: #2f373d;
+    border: 0;
+    display: flex;
+    height: 64px;
+    justify-content: center;
+    width: 64px;
+
+    &:hover {
+      background-color: #262f37;
+    }
+
+    .clearIcon {
+      color: $additional-color;
+      font-size: 24;
+    }
+  }
+}
+
+.modalHeader {
+  background: #fafdff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  min-height: 52px;
+
+  .titleBlock {
+    color: #262f37;
+    letter-spacing: 0.3px;
+  }
+
+  .iconContainer {
+    height: 52px;
+    width: 52px;
+  }
+}
+
+.modalDivider {
+  background: #dde2ed;
+}

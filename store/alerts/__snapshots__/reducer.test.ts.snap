@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Store] Alerts Reducer [Failure] Should handle clearAlertMessage 1`] = `
+Object {
+  "alertsArray": Array [
+    Object {
+      "alertMessage": "INVALID_LOGIN",
+      "alertType": "error",
+    },
+  ],
+}
+`;
+
+exports[`[Store] Alerts Reducer [Failure] Should handle showAlertMessage 1`] = `
+Object {
+  "alertsArray": Array [],
+}
+`;
+
+exports[`[Store] Alerts Reducer [Success] [Snapshot] Should handle clearAlertMessage 1`] = `
+Object {
+  "alertsArray": Array [],
+}
+`;
+
+exports[`[Store] Alerts Reducer [Success] [Snapshot] Should handle showAlertMessage 1`] = `
+Object {
+  "alertsArray": Array [
+    Object {
+      "alertMessage": "INVALID_LOGIN",
+      "alertType": "error",
+    },
+    Object {
+      "alertMessage": "Email is incorrect",
+      "alertType": "error",
+    },
+  ],
+}
+`;

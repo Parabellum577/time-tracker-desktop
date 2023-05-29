@@ -1,0 +1,22 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
+  "rulesDirectory": [],
+  "rules": {
+    "object-literal-sort-keys": false,
+    "no-console": false,
+    "no-empty": false,
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": false,
+    "ordered-imports": false,
+    "jsx-no-lambda": false,
+    "no-var-requires": false
+  },
+  "jsRules": {
+    "object-literal-sort-keys": false,
+    "no-console": false
+  },
+  "linterOptions": {
+    "exclude": ["node_modules/**/*", "*.test.ts"]
+  }
+}

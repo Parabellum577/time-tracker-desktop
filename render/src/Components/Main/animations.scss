@@ -1,0 +1,17 @@
+.page-enter {
+  transform: translateY(calc(100vh - #{$title-bar-height}));
+}
+
+.page-enter-active {
+  transform: initial;
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.page-exit {
+  transform: initial;
+}
+
+.page-exit-active {
+  transform: translateY(calc(100vh - #{$title-bar-height}));
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}

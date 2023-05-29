@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <polygon id="path-1" points="8.94280904 8 13.575974 12.633165 12.633165 13.575974 8 8.94280904 3.36683502 13.575974 2.42402598 12.633165 7.05719096 8 2.42402598 3.36683502 3.36683502 2.42402598 8 7.05719096 12.633165 2.42402598 13.575974 3.36683502"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0230.-Coldtime-#07" transform="translate(-400.000000, -129.000000)">
+            <g id="Icon/s/close-s/gray" transform="translate(408.000000, 137.000000) rotate(-270.000000) translate(-408.000000, -137.000000) translate(400.000000, 129.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Path" fill="#FFFFFF" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

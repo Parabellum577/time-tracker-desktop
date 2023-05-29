@@ -1,0 +1,139 @@
+.navWrap {
+  position: relative;
+}
+
+.avatarBlock {
+  border-radius: 50%;
+  border: 2px solid #1991eb;
+  height: 40px;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  > div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.nav {
+  position: absolute;
+  background: #fff;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  width: 280px;
+  border-radius: 4px;
+
+  &Head {
+    display: flex;
+    align-items: center;
+    padding: 15px 35px 15px 15px;
+    border-bottom: 1px solid #e3e4e6;
+    text-decoration: none;
+    position: relative;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:hover {
+      background: #00000014;
+    }
+
+    .avatarBlock {
+      margin-right: 10px;
+    }
+
+    .userDescriptionBlock {
+      line-height: 1;
+      overflow: hidden;
+      width: 100%;
+      text-align: left;
+
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0 0 5px;
+        color: #48555e;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 167px;
+      }
+
+      span {
+        font-size: 11px;
+        color: #1991eb;
+        font-weight: 700;
+      }
+    }
+
+    .menuIcon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #858e9b;
+    }
+  }
+
+  ul {
+    border-radius: 0 4px;
+
+    * {
+      cursor: pointer;
+    }
+
+    li {
+      &:last-child {
+        a {
+          border-radius: 0 0 4px 4px;
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        color: #48555e;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 10px 15px;
+        justify-content: space-between;
+
+        &:hover {
+          background: #1991eb;
+          color: #fff;
+
+          use,
+          g {
+            fill: #fff;
+          }
+        }
+      }
+
+      .navTitleWrap {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+
+        > div {
+          display: flex;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

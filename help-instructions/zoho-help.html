@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="help-instruction-block">
+      <img class="gif" src="./gif/zoho-help.gif" />
+      <div class="text-instruction">
+        <div class="instruction-title">
+          <h2>Need to generate Zoho Authentication Token?</h2>
+        </div>
+        <ul class="instruction-list">
+          <li>
+            1. Go to
+            <span id="zohoToken" title="Generate Zoho Token link">"Authentication Token Generation"</span> link
+          </li>
+          <li>2. Authorize with your credentials</li>
+          <li>3. Click on "Generate Authtoken" button</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      let isPending = false
+      const { openExternal } = require('electron').remote.shell
+      const link = document.getElementById('zohoToken')
+      link.addEventListener('click', event => {
+        if (!isPending) {
+          isPending = true
+          link.style.color = 'red'
+          openExternal('https://accounts.zoho.com/apiauthtoken/create?SCOPE=ZohoProjects/projectsapi')
+          setTimeout(() => {
+            isPending = false
+          }, 5000)
+        }
+      })
+    </script>
+  </body>
+</html>
